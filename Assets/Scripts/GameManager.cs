@@ -38,42 +38,42 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (currentAlertLevel > 0 && timeSinceLastDetected >= timeToStartDecrease)
-        {
-            DecreaseAlertLevel(alertDecreaseRate * Time.deltaTime);
-        }
-
-        timeSinceLastDetected += Time.deltaTime;
+        // if (currentAlertLevel > 0 && timeSinceLastDetected >= timeToStartDecrease)
+        // {
+        //     DecreaseAlertLevel(alertDecreaseRate * Time.deltaTime);
+        // }
+        //
+        // timeSinceLastDetected += Time.deltaTime;
     }
 
-    public void IncreaseAlertLevel(float amount)
-    {
-        currentAlertLevel += amount;
-        if (currentAlertLevel > maxAlertLevel)
-        {
-            currentAlertLevel = maxAlertLevel;
-        }
-
-        timeSinceLastDetected = 0f;
-        CheckForGameOver();
-    }
-
-    public void DecreaseAlertLevel(float amount)
-    {
-        currentAlertLevel -= amount;
-        if (currentAlertLevel < 0)
-        {
-            currentAlertLevel = 0;
-        }
-    }
-
-    private void CheckForGameOver()
-    {
-        if (currentAlertLevel >= maxAlertLevel)
-        {
-            //GameOver
-        }
-    }
+    // public void IncreaseAlertLevel(float amount)
+    // {
+    //     currentAlertLevel += amount;
+    //     if (currentAlertLevel > maxAlertLevel)
+    //     {
+    //         currentAlertLevel = maxAlertLevel;
+    //     }
+    //
+    //     timeSinceLastDetected = 0f;
+    //     CheckForGameOver();
+    // }
+    //
+    // public void DecreaseAlertLevel(float amount)
+    // {
+    //     currentAlertLevel -= amount;
+    //     if (currentAlertLevel < 0)
+    //     {
+    //         currentAlertLevel = 0;
+    //     }
+    // }
+    //
+    // private void CheckForGameOver()
+    // {
+    //     if (currentAlertLevel >= maxAlertLevel)
+    //     {
+    //         //GameOver
+    //     }
+    // }
 
     public void AddScore(int scoreToAdd)
     {
@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        //Fade Out
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void RestartGame()

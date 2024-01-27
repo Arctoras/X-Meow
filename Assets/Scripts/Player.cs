@@ -18,7 +18,14 @@ public class Player : MonoBehaviour
     [SerializeField, Min(0)] float bodyTurnSpeed;
     [SerializeField, Range(0,90)] float headTurnBounds;
 
+
     /*bool canJump = false;*/
+
+    public GameObject impactPrefab;
+
+    bool canJump = false;
+    float jumpForce = 0;
+
 
     Rigidbody rb;
     Animator animator;
@@ -47,6 +54,11 @@ public class Player : MonoBehaviour
             ScoreItems scoreItems = interactable.GetComponent<ScoreItems>();
             if (scoreItems != null)
             {
+                Vector3 collisionPoint = interactable.ClosestPoint(transform.position);
+
+                GameObject effect = Instantiate(impactPrefab, collisionPoint, Quaternion.identity);
+                
+                Destroy(effect, 3f);
                 switch (scoreItems.objectsType)
                 {
                     case ScoreItems.ObjectsType.Dynamic:

@@ -52,13 +52,13 @@ public class CCTVSystem : MonoBehaviour
     public void PlayerDetected()
     {
         SetCameraColor(detectedColor);
-        GameManager.Instance.IncreaseAlertLevel(alertIncreaseRate);
+        // GameManager.Instance.IncreaseAlertLevel(alertIncreaseRate);
     }
 
     public void PlayerAlert()
     {
         SetCameraColor(alertColor);
-        GameManager.Instance.IncreaseAlertLevel(alertIncreaseRate);
+        // GameManager.Instance.IncreaseAlertLevel(alertIncreaseRate);
     }
 
     public void ResetCamera()
