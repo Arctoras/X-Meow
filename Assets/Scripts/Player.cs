@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using RayFire;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -40,9 +41,28 @@ public class Player : MonoBehaviour
     }
     void Interact(Collider interactable)
     {
-        if (Input.GetButton("Interact"))
+        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
         {
             Debug.Log(interactable.name);
+            ScoreItems scoreItems = interactable.GetComponent<ScoreItems>();
+            if (scoreItems != null)
+            {
+                switch (scoreItems.objectsType)
+                {
+                    case ScoreItems.ObjectsType.Dynamic:
+                        scoreItems.ApplyDamage(50f);
+                        //sound
+                        //vfx
+                        break;
+                    case ScoreItems.ObjectsType.Fragile:
+                        scoreItems.ApplyDamage(50f);
+                        //sfx
+                        //vfx
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
     }
     void Smack()

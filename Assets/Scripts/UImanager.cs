@@ -9,7 +9,7 @@ public class UImanager : MonoBehaviour
     public static UImanager Instance;
 
     [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private GameObject gameOverScreen;
+    // [SerializeField] private GameObject gameOverScreen;
 
     private void Awake()
     {
@@ -33,9 +33,9 @@ public class UImanager : MonoBehaviour
 
     public void SetGameOverScreenVisibility(bool isVisble)
     {
-        if (gameOverScreen != null)
-        {
-            gameOverScreen.SetActive(isVisble);
-        }
+        // if (gameOverScreen != null)
+        // {
+        //     gameOverScreen.SetActive(isVisble);
+        // }
     }
 }
