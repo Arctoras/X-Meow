@@ -10,15 +10,15 @@ public class Player : MonoBehaviour
     [SerializeField, Min(0)] float strafeMultiplier;
     [SerializeField, Min(1)] float sprintMultiplier;
 
-    [SerializeField, Min(0)] float maxJumpForce;
-    [SerializeField, Min(0.00001f)] float jumpChargeTime;
+    /*[SerializeField, Min(0)] float maxJumpForce;
+    [SerializeField, Min(0.00001f)] float jumpChargeTime;**/
+    [SerializeField] float JumpForce = 8f;
 
     [SerializeField, Min(0)] float headTurnSpeed;
     [SerializeField, Min(0)] float bodyTurnSpeed;
     [SerializeField, Range(0,90)] float headTurnBounds;
 
-    bool canJump = false;
-    float jumpForce = 0;
+    /*bool canJump = false;*/
 
     Rigidbody rb;
     Animator animator;
@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
             animator.SetInteger("State", 2);
         }
         transform.Translate(new Vector3(displacement.x * strafeMultiplier, 0, displacement.y), Space.Self);
-        if(canJump && Input.GetButton("Jump"))
+        /*if(canJump && Input.GetButton("Jump"))
         {
             jumpForce = Mathf.Min(maxJumpForce, jumpForce + (maxJumpForce * ( Time.deltaTime / jumpChargeTime)));
             animator.SetInteger("State", 3);
@@ -107,6 +107,27 @@ public class Player : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce);
             jumpForce = 0;
+        }**/
+
+        //layser detect if the player is on the ground
+        bool canJump = false;
+        Debug.DrawRay(transform.position, Vector3.down * 1.1f, Color.red);
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.1f))
+        {
+            if (hit.collider.gameObject != null)
+            {
+                canJump = true;
+            }
+        }
+        else
+        {
+            canJump = false;
+        }
+
+        if(canJump && Input.GetButtonDown("Jump"))
+        {
+            rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
         }
     }
     private void OnTriggerStay(Collider other)
@@ -114,7 +135,7 @@ public class Player : MonoBehaviour
         Interact(other);
     }
 
-    private void OnCollisionStay(Collision collision)
+    /*private void OnCollisionStay(Collision collision)
     {
         canJump = true;
     }
@@ -122,5 +143,5 @@ public class Player : MonoBehaviour
     void OnCollisionExit(Collision collision)
     {
         canJump = false;
-    }
+    }**/
 }
