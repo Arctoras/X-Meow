@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
         if (currentAlertLevel >= maxAlertLevel)
         {
             //GameOver
+            gameOverScreen.SetActive(true);
         }
     }
 

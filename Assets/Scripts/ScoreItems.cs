@@ -13,9 +13,28 @@ public class ScoreItems : MonoBehaviour
         Fragile,
     }
 
+    public ObjectsType objectsType;
+
     public float durablity = 100f;
     public int scoreValue = 10;
     private bool isDestoryed = false;
+
+    private void Start()
+    {
+        switch (objectsType)
+        {
+            case ObjectsType.Static:
+                //set durablity
+                //set ScoreValue
+                break;
+            case ObjectsType.Dynamic:
+                break;
+            case ObjectsType.Broken:
+                break;
+            case ObjectsType.Fragile:
+                break;
+        }
+    }
 
     private void OnCollisionEnter(Collision other)
     {
@@ -42,7 +61,7 @@ public class ScoreItems : MonoBehaviour
         isDestoryed = true;
         GameManager.Instance.AddScore(scoreValue);
         //sound
-        Destroy(gameObject);
+        // Destroy(gameObject);
         //other destory effects
     }
 }
