@@ -54,7 +54,7 @@ public class NoiseSystem : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("GameManager Not Binded");
+            Debug.LogError("GameManager Not Binded");
         }
     }
 

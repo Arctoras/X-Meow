@@ -5,17 +5,26 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
-    [SerializeField] private GameObject DialogueCanvas;
+    [SerializeField] private int _noiseValue = 50;
+
+    [Header("Optional - Show Dialogue")]
+    [SerializeField] private GameObject m_DialogueCanvas;
 
     [Header("Other events that need to be triggered")]
     public UnityEvent OnInteract;
+
+    private NoiseSystem _NoiseSystem;
 
     public bool HasInteracted = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        DialogueCanvas.SetActive(false);
+        if (m_DialogueCanvas != null)
+        {
+            m_DialogueCanvas.SetActive(false);
+        }
+        _NoiseSystem = FindObjectOfType<NoiseSystem>();
     }
 
     // Update is called once per frame
@@ -29,7 +38,14 @@ public class Interactable : MonoBehaviour
         if (!HasInteracted)
         {
             Debug.Log("Interacting with " + name);
-            DialogueCanvas.SetActive(true);
+
+            _NoiseSystem.AddNoise(_noiseValue);
+
+            if (m_DialogueCanvas != null)
+            {
+                m_DialogueCanvas.SetActive(false);
+            }
+
             OnInteract.Invoke();
 
             HasInteracted = true;
