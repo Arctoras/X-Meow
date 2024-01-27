@@ -7,7 +7,7 @@ public class InteractEvent : ScriptableObject
 {
     public int ScoreValue = 0;
     public float NoiseValue = 50;
-    public string DialogueText;
+    public Sprite FaceImage;
     public float DialogueDelay = 0f;
     public string AnimationTrigger = "Interact";
     public AudioClip EventAudio;

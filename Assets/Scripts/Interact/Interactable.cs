@@ -61,7 +61,7 @@ public class Interactable : MonoBehaviour
             _noiseSystem.AddNoise(interactEvent.NoiseValue);
 
             // Show dialogue
-            StartCoroutine(DelayedDialogue(interactEvent.DialogueText));
+            StartCoroutine(DelayedDialogue(interactEvent.FaceImage, interactEvent.DialogueDelay));
 
             // Trigger animation
             if (m_Animator != null) m_Animator.SetTrigger(interactEvent.AnimationTrigger);
@@ -82,11 +82,11 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    IEnumerator DelayedDialogue(string text)
+    IEnumerator DelayedDialogue(Sprite img, float delayedTime)
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(delayedTime);
 
         // Send dialogue to DialogueSystem
-        FindObjectOfType<ChatSystem>().ShowChat(text);
+        FindObjectOfType<ChatSystem>().ShowFaceImage(img);
     }
 }
