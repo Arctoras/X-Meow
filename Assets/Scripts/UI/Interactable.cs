@@ -43,7 +43,7 @@ public class Interactable : MonoBehaviour
 
             if (m_DialogueCanvas != null)
             {
-                m_DialogueCanvas.SetActive(false);
+                m_DialogueCanvas.SetActive(true);
             }
 
             OnInteract.Invoke();
