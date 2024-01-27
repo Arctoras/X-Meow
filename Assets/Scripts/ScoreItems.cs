@@ -44,10 +44,10 @@ public class ScoreItems : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            CheckForDestruction();
-        }
+        // if (Input.GetKeyDown(KeyCode.F))
+        // {
+        //     CheckForDestruction();
+        // }
     }
 
     public void ApplyDamage(float damage)
@@ -57,14 +57,14 @@ public class ScoreItems : MonoBehaviour
         
     }
 
-    // private void OnCollisionEnter(Collision other)
-    // {
-    //     if (other.relativeVelocity.magnitude > 5)
-    //     {
-    //         durablity -= other.relativeVelocity.magnitude;
-    //         CheckForDestruction();
-    //     }
-    // }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.relativeVelocity.magnitude > 5)
+        {
+            durablity -= other.relativeVelocity.magnitude;
+            CheckForDestruction();
+        }
+    }
 
     void CheckForDestruction()
     {
@@ -85,6 +85,7 @@ public class ScoreItems : MonoBehaviour
         {
             _rayfireRigid.Demolish();
         }
+        
         //sound
         // Destroy(gameObject);
         //other destory effects
