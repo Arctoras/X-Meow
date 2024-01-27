@@ -6,10 +6,18 @@ using UnityEngine.UI;
 public class NoiseSystem : MonoBehaviour
 {
     [SerializeField] private Slider noiseBar;
-    [SerializeField] private int noiseValue;
-    [SerializeField] private int noiseMaxValue = 100;
+    [SerializeField] private Image barFillImg;
+    [SerializeField] private Sprite GreenSprite;
+    [SerializeField] private Sprite YellowSprite;
+    [SerializeField] private Sprite RedSprite;
 
-    [SerializeField] private GameManager gameManager;
+    [SerializeField] private float noiseValue;
+    [SerializeField] private float noiseMaxValue = 100;
+    [SerializeField] private float noiseReduceSpeed = 1;
+
+    private GameManager gameManager;
+
+
 
     float reduceTimer;
     bool isOver = false;
@@ -17,7 +25,7 @@ public class NoiseSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameManager.Instance;
     }
 
     // Update is called once per frame
@@ -30,7 +38,7 @@ public class NoiseSystem : MonoBehaviour
             {
                 if (noiseValue > 0)
                 {
-                    noiseValue -= 1;
+                    noiseValue -= noiseReduceSpeed;
                 }
                 reduceTimer = 0.1f;
             }
@@ -54,7 +62,7 @@ public class NoiseSystem : MonoBehaviour
         }
         else
         {
-            Debug.LogError("GameManager Not Binded");
+            Debug.LogError("GameManager Not Find");
         }
     }
 
@@ -62,9 +70,21 @@ public class NoiseSystem : MonoBehaviour
     {
         float barValue = Mathf.Clamp01(noiseValue * 1f / noiseMaxValue);
         noiseBar.value = Mathf.Lerp(noiseBar.value, barValue, 0.1f);
+        if(barValue < 0.4f)
+        {
+            barFillImg.sprite = GreenSprite;
+        }
+        else if(barValue < 0.7f)
+        {
+            barFillImg.sprite = YellowSprite;
+        }
+        else
+        {
+            barFillImg.sprite = RedSprite;
+        }
     }
 
-    public void AddNoise(int value)
+    public void AddNoise(float value)
     {
         noiseValue += value;
     }

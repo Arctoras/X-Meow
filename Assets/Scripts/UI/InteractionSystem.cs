@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractionTip : MonoBehaviour
+public class InteractionSystem : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    [SerializeField] private GameObject childPanel;
-    public float InteractionRadius = 3f;
+    [SerializeField] private GameObject tipPanel;
+    public float InteractionRadius = 1f;
 
 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class InteractionTip : MonoBehaviour
         foreach (Interactable interactable in interactables)
         {
             float distance = Vector3.Distance(interactable.transform.position, player.position);
-            if (distance < closestDistance && !interactable.HasInteracted)
+            if (distance < closestDistance)
             {
                 closest = interactable;
                 closestDistance = distance;
@@ -34,7 +34,7 @@ public class InteractionTip : MonoBehaviour
         if (closest != null)
         {
             //Show the interaction tip
-            childPanel.SetActive(true);
+            tipPanel.SetActive(true);
             transform.position = UnityEngine.Camera.main.WorldToScreenPoint(closest.transform.position);
 
             //Interact with the object
@@ -46,7 +46,7 @@ public class InteractionTip : MonoBehaviour
         }
         else
         {
-            childPanel.SetActive(false);
+            tipPanel.SetActive(false);
         }
     }
 }
