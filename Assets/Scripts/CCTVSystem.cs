@@ -10,11 +10,13 @@ public class CCTVSystem : MonoBehaviour
     public Color alertColor = Color.yellow;
     public Color detectedColor = Color.red;
     public float alertIncreaseRate = 1f;
+    public float alertIncreaseRateWhenDestorying = 2f;
     public float pitchAngle = 30f;
 
     public float rotationSpeed = 30f;
     public float rotationAngle = 45f;
 
+    private bool isPlayerDestorying = false;
     private float currentAngle = 0f;
     private float direction = 1f;
     private void Start()

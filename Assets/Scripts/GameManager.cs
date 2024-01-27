@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,7 +15,6 @@ public class GameManager : MonoBehaviour
 
     public int score = 0;
     public TextMeshProUGUI scoreText;
-    public GameObject gameOverScreen;
     
     void Awake()
     {
@@ -37,7 +33,7 @@ public class GameManager : MonoBehaviour
     {
         score = 0;
         UpdateScoreText();
-        gameOverScreen.SetActive(false);
+        //Maybe Fade In?
     }
 
     private void Update()
@@ -76,7 +72,6 @@ public class GameManager : MonoBehaviour
         if (currentAlertLevel >= maxAlertLevel)
         {
             //GameOver
-            gameOverScreen.SetActive(true);
         }
     }
 
@@ -95,7 +90,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        gameOverScreen.SetActive(true);
+        //Fade Out
     }
 
     public void RestartGame()
