@@ -6,10 +6,16 @@ using UnityEngine.UI;
 public class NoiseSystem : MonoBehaviour
 {
     [SerializeField] private Slider noiseBar;
+
     [SerializeField] private Image barFillImg;
-    [SerializeField] private Sprite GreenSprite;
-    [SerializeField] private Sprite YellowSprite;
-    [SerializeField] private Sprite RedSprite;
+    [SerializeField] private Sprite GreenBar;
+    [SerializeField] private Sprite YellowBar;
+    [SerializeField] private Sprite RedBar;
+
+    [SerializeField] private Image handleImg;
+    [SerializeField] private Sprite GreenHandle;
+    [SerializeField] private Sprite YellowHandle;
+    [SerializeField] private Sprite RedHandle;
 
     [SerializeField] private float noiseValue;
     [SerializeField] private float noiseMaxValue = 100;
@@ -70,17 +76,20 @@ public class NoiseSystem : MonoBehaviour
     {
         float barValue = Mathf.Clamp01(noiseValue * 1f / noiseMaxValue);
         noiseBar.value = Mathf.Lerp(noiseBar.value, barValue, 0.1f);
-        if(barValue < 0.4f)
+        if (barValue < 0.4f)
         {
-            barFillImg.sprite = GreenSprite;
+            barFillImg.sprite = GreenBar;
+            handleImg.sprite = GreenHandle;
         }
-        else if(barValue < 0.7f)
+        else if (barValue < 0.7f)
         {
-            barFillImg.sprite = YellowSprite;
+            barFillImg.sprite = YellowBar;
+            handleImg.sprite = YellowHandle;
         }
         else
         {
-            barFillImg.sprite = RedSprite;
+            barFillImg.sprite = RedBar;
+            handleImg.sprite = RedHandle;
         }
     }
 
