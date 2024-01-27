@@ -81,6 +81,7 @@ public class Player : MonoBehaviour
         if(canJump && Input.GetButton("Jump"))
         {
             jumpForce = Mathf.Min(maxJumpForce, jumpForce + (maxJumpForce * ( Time.deltaTime / jumpChargeTime)));
+            animator.SetInteger("State", 3);
         }
         if(canJump && Input.GetButtonUp("Jump"))
         {
