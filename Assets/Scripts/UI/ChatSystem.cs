@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChatSystem : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _chatText;
+    [SerializeField] private Image _faceImage;
     [SerializeField] private GameObject _chatBox;
     private float _chatTimer = 0f;
     [SerializeField] private float _chatDuration = 3f;
@@ -26,9 +27,9 @@ public class ChatSystem : MonoBehaviour
         }
     }
 
-    public void ShowChat(string text)
+    public void ShowFaceImage(Sprite image)
     {
-        _chatText.text = text;
+        _faceImage.sprite = image;
         _chatBox.SetActive(true);
         _chatTimer = _chatDuration;
     }
