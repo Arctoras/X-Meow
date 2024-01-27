@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/FollowObjects.cs.meta
+guid: 83d583d9fab02604fac098ee5144a42b
+========
+guid: 85a5dd633b3544a4c9e1d2059fe45ea5
+>>>>>>>> 542fe105d5fa038d281d192a424970415aceb064:Assets/Scripts/UI/InteractionTip.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

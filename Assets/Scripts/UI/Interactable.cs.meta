@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/EmotionManager.cs.meta
+guid: ee999cffdc8d25c43842c3163ea611d2
+========
+guid: c138bfb18a1309d47820c2997fb14d76
+>>>>>>>> 542fe105d5fa038d281d192a424970415aceb064:Assets/Scripts/UI/Interactable.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using RayFire;
 using UnityEngine;
 
 public class ScoreItems : MonoBehaviour
@@ -9,45 +10,65 @@ public class ScoreItems : MonoBehaviour
     {
         Static,
         Dynamic,
-        Broken,
         Fragile,
+        Interactive,
     }
 
     public ObjectsType objectsType;
 
     public float durablity = 100f;
     public int scoreValue = 10;
-    private bool isDestoryed = false;
+    private bool _isDestoryed = false;
+    private RayfireRigid _rayfireRigid;
 
     private void Start()
     {
         switch (objectsType)
         {
             case ObjectsType.Static:
-                //set durablity
-                //set ScoreValue
+                //Unbeatable
                 break;
             case ObjectsType.Dynamic:
+                //can be pushed
+                //drop on floor to be destoried
                 break;
-            case ObjectsType.Broken:
+            case ObjectsType.Interactive:
+                //maybe animation?
                 break;
             case ObjectsType.Fragile:
+                //broken
+                _rayfireRigid = GetComponent<RayfireRigid>();
                 break;
         }
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void Update()
     {
-        if (other.relativeVelocity.magnitude > 5)
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            durablity -= other.relativeVelocity.magnitude;
             CheckForDestruction();
         }
     }
 
+    public void ApplyDamage(float damage)
+    {
+        durablity -= damage;
+        CheckForDestruction();
+        
+    }
+
+    // private void OnCollisionEnter(Collision other)
+    // {
+    //     if (other.relativeVelocity.magnitude > 5)
+    //     {
+    //         durablity -= other.relativeVelocity.magnitude;
+    //         CheckForDestruction();
+    //     }
+    // }
+
     void CheckForDestruction()
     {
-        if (durablity <= 0 && !isDestoryed)
+        if (durablity <= 0 && !_isDestoryed)
         {
             //VFX
             //disable renderer
@@ -58,8 +79,12 @@ public class ScoreItems : MonoBehaviour
 
     void DestoryItem()
     {
-        isDestoryed = true;
+        _isDestoryed = true;
         GameManager.Instance.AddScore(scoreValue);
+        if (_rayfireRigid != null)
+        {
+            _rayfireRigid.Demolish();
+        }
         //sound
         // Destroy(gameObject);
         //other destory effects
