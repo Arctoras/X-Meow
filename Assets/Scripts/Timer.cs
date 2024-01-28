@@ -20,7 +20,7 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        if (timerIsRunning)
+        if (timerIsRunning && !GameManager.Instance.isGameOver)
         {
             if (timeRemaining > 0)
             {
