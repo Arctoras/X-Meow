@@ -3,7 +3,11 @@ guid: 446cd7feb7754492a858018f4b3e985f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - glassBroken: {fileID: 8300000, guid: b398ef0db4cc74638b30795f609c3e2b, type: 3}
+  - brokenSound: {fileID: 8300000, guid: cf46fcb9dc5f641d783c478392b347fc, type: 3}
+  - paperSound: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
+  - textureSound: {fileID: 8300000, guid: f2b32a80bb2644cdbbd6c805bd5cb2cf, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
