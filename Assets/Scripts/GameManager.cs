@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     public Sprite LoudSoundSprite;
     public TMP_Text GameOverScore;
 
+    public GameObject PauseMenu;
+
     public bool isGameStarted = false;
     public bool isGameOver = false;
     
@@ -75,6 +77,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
+        }
         // if (currentAlertLevel > 0 && timeSinceLastDetected >= timeToStartDecrease)
         // {
         //     DecreaseAlertLevel(alertDecreaseRate * Time.deltaTime);
@@ -143,8 +149,33 @@ public class GameManager : MonoBehaviour
         Cursor.visible = true;
     }
 
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+        PauseMenu.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        PauseMenu.SetActive(false);
+        if (isGameStarted)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
+
     public void RestartGame()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
