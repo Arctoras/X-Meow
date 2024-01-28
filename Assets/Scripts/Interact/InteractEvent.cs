@@ -11,4 +11,5 @@ public class InteractEvent : ScriptableObject
     public float DialogueDelay = 0f;
     public string AnimationTrigger = "Interact";
     public AudioClip EventAudio;
+    public float DisablePlayerModelTime = 0f;
 }
