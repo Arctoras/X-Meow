@@ -19,7 +19,9 @@ public class Interactable : MonoBehaviour
 
     private NoiseSystem _noiseSystem;
     private AudioSource _audioSource;
-    
+
+    [Header("Optional - Used to disable Cat Model")]
+    [SerializeField] private GameObject m_CatModel;
 
     // Start is called before the first frame update
     void Start()
@@ -69,6 +71,12 @@ public class Interactable : MonoBehaviour
             // Trigger other events
             OnInteract.Invoke();
 
+            // Disable Player Model (If necessary)
+            if(interactEvent.DisablePlayerModelTime > 0.1f)
+            {
+                StartCoroutine(DisableModel(interactEvent.DisablePlayerModelTime));
+            }
+
             // Ready for next event
             _eventID++;
             if (_eventID >= InteractEvents.Count)
@@ -88,5 +96,12 @@ public class Interactable : MonoBehaviour
 
         // Send dialogue to DialogueSystem
         FindObjectOfType<ChatSystem>().ShowFaceImage(img);
+    }
+
+    IEnumerator DisableModel(float time)
+    {
+        m_CatModel.SetActive(false);
+        yield return new WaitForSeconds(time);
+        m_CatModel.SetActive(true);
     }
 }
