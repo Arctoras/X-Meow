@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1367,7 +1367,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 4
-  player: {fileID: 0}
   durablity: 100
   scoreValue: 50
   noiseValue: 20
@@ -1712,7 +1711,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 4
-  player: {fileID: 0}
   durablity: 100
   scoreValue: 50
   noiseValue: 20
@@ -2286,7 +2284,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 4
-  player: {fileID: 0}
   durablity: 100
   scoreValue: 50
   noiseValue: 20
@@ -2523,7 +2520,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 2
-  player: {fileID: 0}
   durablity: 100
   scoreValue: 100
   noiseValue: 50
@@ -3622,7 +3618,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 1
-  player: {fileID: 0}
   durablity: 150
   scoreValue: 400
   noiseValue: 50
@@ -4031,102 +4026,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5578222989599419389, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
   m_PrefabInstance: {fileID: 1717051161}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &560621710
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560621703}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &572526030 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2075300618044781594, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
@@ -4669,7 +4568,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 4
-  player: {fileID: 0}
   durablity: 100
   scoreValue: 50
   noiseValue: 20
@@ -7307,7 +7205,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 2
-  player: {fileID: 0}
   durablity: 50
   scoreValue: 100
   noiseValue: 20
@@ -7997,7 +7894,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 2
-  player: {fileID: 0}
   durablity: 50
   scoreValue: 500
   noiseValue: 50
@@ -9346,7 +9242,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 4
-  player: {fileID: 0}
   durablity: 100
   scoreValue: 50
   noiseValue: 20
@@ -9428,7 +9323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d583d9fab02604fac098ee5144a42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   tipPanel: {fileID: 2060650629}
   InteractionRadius: 1
 --- !u!222 &1249606307
@@ -10279,7 +10173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 2
-  player: {fileID: 0}
   durablity: 150
   scoreValue: 300
   noiseValue: 50
@@ -11357,7 +11250,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 4
-  player: {fileID: 0}
   durablity: 100
   scoreValue: 50
   noiseValue: 20
@@ -12739,49 +12631,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
-      propertyPath: impactSound
-      value: 
-      objectReference: {fileID: 8300000, guid: a8be8f22937c545a2b0f3ff19c832522, type: 3}
-    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
-      propertyPath: impactPrefab
-      value: 
-      objectReference: {fileID: 9157105887711914197, guid: c4f829cb7dd4b864caf8832ec5b1ee55, type: 3}
-    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
-      propertyPath: bodyTurnSpeed
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
-      propertyPath: headTurnSpeed
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
-      propertyPath: OnDestroyItem.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
-      propertyPath: OnDestroyItem.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
       propertyPath: OnDestroyItem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2068935595}
-    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
-      propertyPath: OnDestroyItem.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
-      propertyPath: OnDestroyItem.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DoBadThings
-      objectReference: {fileID: 0}
-    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
-      propertyPath: OnDestroyItem.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ChatSystem, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
-      propertyPath: OnDestroyItem.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5053607150070133063, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.475
@@ -12829,10 +12681,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5578222989599419389, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 560621710}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
 --- !u!1 &1726640713 stripped
 GameObject:
@@ -14214,7 +14063,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 2
-  player: {fileID: 0}
   durablity: 50
   scoreValue: 100
   noiseValue: 20
@@ -15951,7 +15799,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 2
-  player: {fileID: 0}
   durablity: 100
   scoreValue: 300
   noiseValue: 20
@@ -16913,7 +16760,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 2
-  player: {fileID: 0}
   durablity: 100
   scoreValue: 300
   noiseValue: 20
@@ -17221,7 +17067,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 2
-  player: {fileID: 0}
   durablity: 50
   scoreValue: 150
   noiseValue: 20
@@ -17508,7 +17353,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 2
-  player: {fileID: 0}
   durablity: 100
   scoreValue: 300
   noiseValue: 20
@@ -18007,7 +17851,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 2
-  player: {fileID: 0}
   durablity: 50
   scoreValue: 150
   noiseValue: 20
@@ -18250,7 +18093,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 2
-  player: {fileID: 0}
   durablity: 100
   scoreValue: 300
   noiseValue: 20
@@ -19278,7 +19120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsType: 2
-  player: {fileID: 0}
   durablity: 50
   scoreValue: 150
   noiseValue: 20

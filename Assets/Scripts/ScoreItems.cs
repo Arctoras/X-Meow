@@ -16,7 +16,7 @@ public class ScoreItems : MonoBehaviour
     }
 
     public ObjectsType objectsType;
-    public GameObject player;
+    GameObject player;
 
     public float durablity = 100f;
     public int scoreValue = 10;
@@ -30,6 +30,7 @@ public class ScoreItems : MonoBehaviour
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         _noiseSystem = FindObjectOfType<NoiseSystem>();
         playerAudioSource = player.GetComponent<AudioSource>();
 
