@@ -31,7 +31,7 @@ public class InteractionSystem : MonoBehaviour
             }
         }
 
-        if (closest != null)
+        if (closest != null && UnityEngine.Camera.main != null)
         {
             //Show the interaction tip
             tipPanel.SetActive(true);
