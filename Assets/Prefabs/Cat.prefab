@@ -362,6 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1967315497769161287}
   - component: {fileID: 4557945568134281320}
+  - component: {fileID: 1434663729712836132}
   m_Layer: 0
   m_Name: foot.F.R_end
   m_TagString: Untagged
@@ -385,6 +386,29 @@ Transform:
   m_Father: {fileID: 9058837397867614259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &4557945568134281320
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812373648439316427}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.11
+  m_Height: 0.39
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.45, z: 0}
+--- !u!136 &1434663729712836132
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -642,6 +666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7430830015568187225}
   - component: {fileID: 2194013374652260849}
+  - component: {fileID: 5585385428298216132}
   m_Layer: 0
   m_Name: foot.B.R_end
   m_TagString: Untagged
@@ -665,6 +690,29 @@ Transform:
   m_Father: {fileID: 271513622746181039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &2194013374652260849
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883796897371894772}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.11
+  m_Height: 0.39
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.45, z: 0}
+--- !u!136 &5585385428298216132
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1729,6 +1777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141139319305667707}
   - component: {fileID: 3552278998700787877}
+  - component: {fileID: 7716047325525683484}
   m_Layer: 0
   m_Name: foot.F.L_end
   m_TagString: Untagged
@@ -1752,6 +1801,29 @@ Transform:
   m_Father: {fileID: 3217182866811141700}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &3552278998700787877
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6576855475035769288}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.11
+  m_Height: 0.39
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.45, z: 0}
+--- !u!136 &7716047325525683484
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2303,6 +2375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8291726412343233264}
   - component: {fileID: 3451242486903904568}
+  - component: {fileID: 7568914494535312427}
   m_Layer: 0
   m_Name: foot.B.L_end
   m_TagString: Untagged
@@ -2326,6 +2399,29 @@ Transform:
   m_Father: {fileID: 6903004247810759631}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &3451242486903904568
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8498493710915016995}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.11
+  m_Height: 0.39
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.45, z: 0}
+--- !u!136 &7568914494535312427
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
