@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
     [SerializeField, Range(0,90)] float headTurnBounds;
 
     bool canMove = true;
+    bool canSmack = true;
+
+    float timeSpentIdle = 0;
 
     public float forceMagnitude = 10f;
 
@@ -52,12 +55,23 @@ public class Player : MonoBehaviour
         {
             if (canMove) Move();
             Turn();
-            Smack();
+            timeSpentIdle += Time.deltaTime;
         }
     }
     void Interact(Collider interactable)
     {
-        if (Input.GetButtonDown("Fire1")  || Input.GetButtonDown("Fire2"))
+        bool smack = false;
+        if (canSmack)
+            if (Input.GetButtonDown("Fire1"))
+            {
+                smack = true;
+                StartCoroutine(Smack(true));
+            } else if (Input.GetButtonDown("Fire2"))
+            {
+                smack = true;
+                StartCoroutine(Smack(false));
+            }
+        if (smack)
         {
             ScoreItems scoreItems = interactable.GetComponent<ScoreItems>();
             if (scoreItems != null)
@@ -93,17 +107,21 @@ public class Player : MonoBehaviour
                 OnDestroyItem.Invoke();
             }
         }
+        if (smack) timeSpentIdle = 0;
     }
-    void Smack()
+    IEnumerator Smack(bool left)
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            animator.Play("Smack_L");
-        }
-        if (Input.GetButtonDown("Fire2"))
-        {
-            animator.Play("Smack_R");
-        }
+        canSmack = false;
+        canMove = false;
+        if (left)
+            animator.SetTrigger("Smack_L");
+        else
+            animator.SetTrigger("Smack_R");
+        yield return new WaitForSeconds(0.2f);
+        animator.ResetTrigger("Smack_L");
+        animator.ResetTrigger("Smack_R");
+        canSmack = true;
+        canMove = true;
     }
 
     void Turn()
@@ -120,6 +138,7 @@ public class Player : MonoBehaviour
         if(displacement.magnitude > 0)
         {
             animator.SetInteger("State", 1);
+            timeSpentIdle = 0;
         }
         if (Input.GetButton("Sprint"))
         {
@@ -146,7 +165,10 @@ public class Player : MonoBehaviour
         if(canJump && Input.GetButtonDown("Jump"))
         {
             StartCoroutine(Jump());
+            timeSpentIdle = 0;
         }
+
+        if (timeSpentIdle > 5) animator.SetInteger("State", -1);
     }
     private void OnTriggerStay(Collider other)
     {
@@ -156,9 +178,10 @@ public class Player : MonoBehaviour
     IEnumerator Jump()
     {
         canMove = false;
-        animator.Play("Jump");
+        animator.SetTrigger("Jump");
         yield return new WaitForSeconds(0.25f);
         canMove = true;
         rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+        animator.ResetTrigger("Jump");
     }
 }
