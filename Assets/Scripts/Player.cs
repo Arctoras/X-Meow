@@ -11,9 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField, Min(0)] float strafeMultiplier;
     [SerializeField, Min(1)] float sprintMultiplier;
 
-    /*[SerializeField, Min(0)] float maxJumpForce;
-    [SerializeField, Min(0.00001f)] float jumpChargeTime;**/
-    [SerializeField] float JumpForce = 8f;
+    [SerializeField] float jumpForce = 8f;
 
     [SerializeField, Min(0)] float headTurnSpeed;
     [SerializeField, Min(0)] float bodyTurnSpeed;
@@ -21,20 +19,13 @@ public class Player : MonoBehaviour
 
     public float forceMagnitude = 10f;
 
-
-    /*bool canJump = false;*/
-
-    public GameObject impactPrefab;
-
-    bool canJump = false;
-    float jumpForce = 0;
-
+    [SerializeReference] GameObject impactPrefab;
 
     Rigidbody rb;
     Animator animator;
-    private NoiseSystem _noiseSystem;
+    NoiseSystem _noiseSystem;
 
-    [SerializeField]UnityEvent OnDestroyItem;
+    [SerializeReference] UnityEvent OnDestroyItem;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +33,6 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         _noiseSystem = FindObjectOfType<NoiseSystem>();
-        
     }
 
     // Update is called once per frame
@@ -149,7 +139,7 @@ public class Player : MonoBehaviour
 
         if(canJump && Input.GetButtonDown("Jump"))
         {
-            rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
     private void OnTriggerStay(Collider other)
