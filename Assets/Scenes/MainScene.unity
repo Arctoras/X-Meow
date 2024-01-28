@@ -3705,6 +3705,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4613278, y: 1, z: 1.5452048}
   m_Center: {x: 0.23066354, y: 0, z: -0.27260235}
+--- !u!4 &1119396998 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1761104847771191986, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
+  m_PrefabInstance: {fileID: 1717051161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1120678373
 GameObject:
   m_ObjectHideFlags: 0
@@ -5677,6 +5682,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.y
       value: -0.000031685246
       objectReference: {fileID: 0}
+    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1119396998}
     - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
       propertyPath: forceMagnitude
       value: 1500

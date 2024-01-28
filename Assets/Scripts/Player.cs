@@ -13,12 +13,13 @@ public class Player : MonoBehaviour
 
     [SerializeField] float JumpForce = 8f;
 
-    [SerializeField, Min(0)] float headTurnSpeed;
-    [SerializeField, Min(0)] float bodyTurnSpeed;
-    [SerializeField, Range(0,90)] float headTurnBounds;
+    [SerializeField, Min(0)] float cameraTurnSpeed = 180;
+    [SerializeField, Min(0)] float bodyTurnSpeed = 180;
 
     bool canMove = true;
     bool canSmack = true;
+
+    bool idle = true;
 
     float timeSpentIdle = 0;
 
@@ -32,6 +33,10 @@ public class Player : MonoBehaviour
     private AudioSource _audioSource;
     private NoiseSystem _noiseSystem;
 
+    [SerializeReference] Transform camera;
+    Vector3 camStarPos;
+    Quaternion camStarRot;
+
     [SerializeField]UnityEvent OnDestroyItem;
 
     // Start is called before the first frame update
@@ -41,7 +46,8 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         _noiseSystem = FindObjectOfType<NoiseSystem>();
         _audioSource = GetComponent<AudioSource>();
-
+        camStarPos = camera.localPosition;
+        camStarRot = camera.localRotation;
     }
 
     // Update is called once per frame
@@ -73,6 +79,8 @@ public class Player : MonoBehaviour
             }
         if (smack)
         {
+            idle = false;
+            timeSpentIdle = 0;
             ScoreItems scoreItems = interactable.GetComponent<ScoreItems>();
             if (scoreItems != null)
             {
@@ -107,7 +115,6 @@ public class Player : MonoBehaviour
                 OnDestroyItem.Invoke();
             }
         }
-        if (smack) timeSpentIdle = 0;
     }
     IEnumerator Smack(bool left)
     {
@@ -127,18 +134,27 @@ public class Player : MonoBehaviour
     void Turn()
     {
         float rotation = Input.GetAxis("Mouse X") * bodyTurnSpeed * Time.deltaTime;
-        transform.Rotate(0, rotation, 0);
+        if (!idle)
+        {
+            camera.localPosition = camStarPos;
+            camera.localRotation = camStarRot;
+            transform.Rotate(0, rotation, 0);
+        } else
+        {
+            camera.RotateAround(transform.position, Vector3.up, rotation);
+        }
     }
         
     void Move()
     {
-        animator.SetInteger("State", 0);
+        idle = true;
+
         Vector2 direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
         Vector2 displacement = direction * speed * Time.deltaTime;
         if(displacement.magnitude > 0)
         {
             animator.SetInteger("State", 1);
-            timeSpentIdle = 0;
+            idle = false;
         }
         if (Input.GetButton("Sprint"))
         {
@@ -165,9 +181,11 @@ public class Player : MonoBehaviour
         if(canJump && Input.GetButtonDown("Jump"))
         {
             StartCoroutine(Jump());
-            timeSpentIdle = 0;
+            idle = false;
         }
 
+        if (idle) animator.SetInteger("State", 0);
+        else timeSpentIdle = 0;
         if (timeSpentIdle > 5) animator.SetInteger("State", -1);
     }
     private void OnTriggerStay(Collider other)
