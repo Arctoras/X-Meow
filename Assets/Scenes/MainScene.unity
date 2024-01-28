@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708708, g: 0.37838137, b: 0.35725543, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -736,6 +736,219 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62156823}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &104042766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1220217838284857128, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+  m_PrefabInstance: {fileID: 7955453980730346637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &104042767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104042766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446cd7feb7754492a858018f4b3e985f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsType: 2
+  durablity: 400
+  scoreValue: 1200
+  noiseValue: 30
+  glassBroken: {fileID: 8300000, guid: b398ef0db4cc74638b30795f609c3e2b, type: 3}
+  brokenSound: {fileID: 8300000, guid: cf46fcb9dc5f641d783c478392b347fc, type: 3}
+  paperSound: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
+  textureSound: {fileID: 8300000, guid: f2b32a80bb2644cdbbd6c805bd5cb2cf, type: 3}
+--- !u!114 &104042768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104042766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6e52f37bca2404fac00b69fd8d21f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialization: 0
+  simulationType: 0
+  objectType: 0
+  demolitionType: 0
+  physics:
+    mt: 4
+    material: {fileID: 0}
+    massBy: 0
+    mass: 1
+    ct: 0
+    pc: 1
+    ine: 0
+    gr: 1
+    si: 6
+    st: 0.005
+    dm: 0.7
+    rigidBody: {fileID: 0}
+    meshCollider: {fileID: 0}
+    clusterColliders: []
+    ignoreList: 
+    exclude: 0
+    solidity: 1
+    destructible: 0
+  activation:
+    loc: 0
+    off: 0
+    vel: 0
+    dmg: 0
+    act: 0
+    imp: 0
+    con: 0
+    uny: 0
+    atb: 0
+    l: 0
+    lay: 0
+    cnt: {fileID: 0}
+  limitations:
+    col: 1
+    sol: 0.1
+    tag: Untagged
+    depth: 1
+    time: 0.2
+    size: 0.1
+    vis: 0
+    bld: 0
+    bound:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+  meshDemolition:
+    am: 15
+    var: 0
+    dpf: 0.5
+    bias: 0
+    sd: 1
+    use: 0
+    cld: 1
+    cls: 0
+    sim: 4
+    inp: 9
+    prp:
+      col: 0
+      szF: 0
+      dec: 0
+      rem: 0
+      l: 1
+      lay: 0
+      t: 1
+      tag: 
+    ch:
+      tp: 0
+      frm: 3
+      frg: 4
+      skp: 0
+    sht: {fileID: 0}
+    rotStart: {x: 0, y: 0, z: 0, w: 1}
+  clusterDemolition:
+    connectivity: 0
+    minimumArea: 0
+    minimumSize: 0
+    percentage: 0
+    seed: 0
+    type: 0
+    ratio: 15
+    units: 1
+    shardArea: 100
+    shardDemolition: 0
+    minAmount: 3
+    maxAmount: 6
+    demolishable: 1
+    collapse:
+      type: 1
+      start: 0
+      end: 75
+      steps: 10
+      duration: 15
+      var: 0
+      seed: 0
+    clsCount: 1
+    cluster:
+      id: -1
+      tm: {fileID: 0}
+      depth: 0
+      pos: {x: 0, y: 0, z: 0}
+      rot: {x: 0, y: 0, z: 0, w: 0}
+      scl: {x: 0, y: 0, z: 0}
+      bound:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      demolishable: 1
+      rigid: {fileID: 0}
+      shards: []
+      cachedHost: 0
+      areaCollapse: 0
+      minimumArea: 0
+      maximumArea: 0
+      sizeCollapse: 0
+      minimumSize: 0
+      maximumSize: 0
+      randomCollapse: 0
+    minorClusters: []
+    cn: 0
+    nd: 0
+    am: 0
+  referenceDemolition:
+    reference: {fileID: 0}
+    randomList: []
+    action: 0
+    addRigid: 1
+    inheritScale: 1
+    inheritMaterials: 0
+  materials:
+    iMat: {fileID: 0}
+    oMat: {fileID: 0}
+    mScl: 0.1
+    uvE: 0
+    uvC: {x: 0, y: 0}
+    cE: 0
+    cC: {r: 0, g: 0, b: 0, a: 0}
+  damage:
+    en: 0
+    max: 100
+    cur: 0
+    col: 0
+    mlt: 1
+    shr: 0
+  fading:
+    onDemolition: 1
+    onActivation: 0
+    byOffset: 0
+    lifeType: 4
+    lifeTime: 7
+    lifeVariation: 3
+    fadeType: 0
+    fadeTime: 5
+    sizeFilter: 0
+    shardAmount: 5
+  reset:
+    transform: 1
+    damage: 1
+    connectivity: 0
+    action: 0
+    destroyDelay: 1
+    mesh: 4
+    fragments: 0
+  initialized: 0
+  rfMeshes: []
+  fragments: []
+  cacheRotation: {x: 0, y: 0, z: 0, w: 0}
+  transForm: {fileID: 0}
+  rootChild: {fileID: 0}
+  rootParent: {fileID: 0}
+  meshFilter: {fileID: 0}
+  meshRenderer: {fileID: 0}
+  skr: {fileID: 0}
+  rest: {fileID: 0}
+  sound: {fileID: 0}
 --- !u!1 &106852015
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +1052,219 @@ CapsuleCollider:
   m_Height: 0.39
   m_Direction: 1
   m_Center: {x: 0, y: -0.45, z: 0}
+--- !u!1 &153995809 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 968352180924900124, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+  m_PrefabInstance: {fileID: 6659097830311326063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &153995811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153995809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446cd7feb7754492a858018f4b3e985f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsType: 2
+  durablity: 600
+  scoreValue: 1800
+  noiseValue: 30
+  glassBroken: {fileID: 8300000, guid: b398ef0db4cc74638b30795f609c3e2b, type: 3}
+  brokenSound: {fileID: 8300000, guid: cf46fcb9dc5f641d783c478392b347fc, type: 3}
+  paperSound: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
+  textureSound: {fileID: 8300000, guid: f2b32a80bb2644cdbbd6c805bd5cb2cf, type: 3}
+--- !u!114 &153995812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153995809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6e52f37bca2404fac00b69fd8d21f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialization: 0
+  simulationType: 0
+  objectType: 0
+  demolitionType: 0
+  physics:
+    mt: 4
+    material: {fileID: 0}
+    massBy: 0
+    mass: 1
+    ct: 0
+    pc: 1
+    ine: 0
+    gr: 1
+    si: 6
+    st: 0.005
+    dm: 0.7
+    rigidBody: {fileID: 0}
+    meshCollider: {fileID: 0}
+    clusterColliders: []
+    ignoreList: 
+    exclude: 0
+    solidity: 1
+    destructible: 0
+  activation:
+    loc: 0
+    off: 0
+    vel: 0
+    dmg: 0
+    act: 0
+    imp: 0
+    con: 0
+    uny: 0
+    atb: 0
+    l: 0
+    lay: 0
+    cnt: {fileID: 0}
+  limitations:
+    col: 1
+    sol: 0.1
+    tag: Untagged
+    depth: 1
+    time: 0.2
+    size: 0.1
+    vis: 0
+    bld: 0
+    bound:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+  meshDemolition:
+    am: 15
+    var: 0
+    dpf: 0.5
+    bias: 0
+    sd: 1
+    use: 0
+    cld: 1
+    cls: 0
+    sim: 4
+    inp: 9
+    prp:
+      col: 0
+      szF: 0
+      dec: 0
+      rem: 0
+      l: 1
+      lay: 0
+      t: 1
+      tag: 
+    ch:
+      tp: 0
+      frm: 3
+      frg: 4
+      skp: 0
+    sht: {fileID: 0}
+    rotStart: {x: 0, y: 0, z: 0, w: 1}
+  clusterDemolition:
+    connectivity: 0
+    minimumArea: 0
+    minimumSize: 0
+    percentage: 0
+    seed: 0
+    type: 0
+    ratio: 15
+    units: 1
+    shardArea: 100
+    shardDemolition: 0
+    minAmount: 3
+    maxAmount: 6
+    demolishable: 1
+    collapse:
+      type: 1
+      start: 0
+      end: 75
+      steps: 10
+      duration: 15
+      var: 0
+      seed: 0
+    clsCount: 1
+    cluster:
+      id: -1
+      tm: {fileID: 0}
+      depth: 0
+      pos: {x: 0, y: 0, z: 0}
+      rot: {x: 0, y: 0, z: 0, w: 0}
+      scl: {x: 0, y: 0, z: 0}
+      bound:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      demolishable: 1
+      rigid: {fileID: 0}
+      shards: []
+      cachedHost: 0
+      areaCollapse: 0
+      minimumArea: 0
+      maximumArea: 0
+      sizeCollapse: 0
+      minimumSize: 0
+      maximumSize: 0
+      randomCollapse: 0
+    minorClusters: []
+    cn: 0
+    nd: 0
+    am: 0
+  referenceDemolition:
+    reference: {fileID: 0}
+    randomList: []
+    action: 0
+    addRigid: 1
+    inheritScale: 1
+    inheritMaterials: 0
+  materials:
+    iMat: {fileID: 0}
+    oMat: {fileID: 0}
+    mScl: 0.1
+    uvE: 0
+    uvC: {x: 0, y: 0}
+    cE: 0
+    cC: {r: 0, g: 0, b: 0, a: 0}
+  damage:
+    en: 0
+    max: 100
+    cur: 0
+    col: 0
+    mlt: 1
+    shr: 0
+  fading:
+    onDemolition: 1
+    onActivation: 0
+    byOffset: 0
+    lifeType: 4
+    lifeTime: 7
+    lifeVariation: 3
+    fadeType: 0
+    fadeTime: 5
+    sizeFilter: 0
+    shardAmount: 5
+  reset:
+    transform: 1
+    damage: 1
+    connectivity: 0
+    action: 0
+    destroyDelay: 1
+    mesh: 4
+    fragments: 0
+  initialized: 0
+  rfMeshes: []
+  fragments: []
+  cacheRotation: {x: 0, y: 0, z: 0, w: 0}
+  transForm: {fileID: 0}
+  rootChild: {fileID: 0}
+  rootParent: {fileID: 0}
+  meshFilter: {fileID: 0}
+  meshRenderer: {fileID: 0}
+  skr: {fileID: 0}
+  rest: {fileID: 0}
+  sound: {fileID: 0}
 --- !u!1 &213832728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,6 +2829,219 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 749353296}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &758565753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3109592790268079897, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+  m_PrefabInstance: {fileID: 6659097830311326063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &758565755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758565753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446cd7feb7754492a858018f4b3e985f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsType: 2
+  durablity: 400
+  scoreValue: 1200
+  noiseValue: 25
+  glassBroken: {fileID: 8300000, guid: b398ef0db4cc74638b30795f609c3e2b, type: 3}
+  brokenSound: {fileID: 8300000, guid: cf46fcb9dc5f641d783c478392b347fc, type: 3}
+  paperSound: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
+  textureSound: {fileID: 8300000, guid: f2b32a80bb2644cdbbd6c805bd5cb2cf, type: 3}
+--- !u!114 &758565756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758565753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6e52f37bca2404fac00b69fd8d21f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialization: 0
+  simulationType: 0
+  objectType: 0
+  demolitionType: 0
+  physics:
+    mt: 4
+    material: {fileID: 0}
+    massBy: 0
+    mass: 1
+    ct: 0
+    pc: 1
+    ine: 0
+    gr: 1
+    si: 6
+    st: 0.005
+    dm: 0.7
+    rigidBody: {fileID: 0}
+    meshCollider: {fileID: 0}
+    clusterColliders: []
+    ignoreList: 
+    exclude: 0
+    solidity: 1
+    destructible: 0
+  activation:
+    loc: 0
+    off: 0
+    vel: 0
+    dmg: 0
+    act: 0
+    imp: 0
+    con: 0
+    uny: 0
+    atb: 0
+    l: 0
+    lay: 0
+    cnt: {fileID: 0}
+  limitations:
+    col: 1
+    sol: 0.1
+    tag: Untagged
+    depth: 1
+    time: 0.2
+    size: 0.1
+    vis: 0
+    bld: 0
+    bound:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+  meshDemolition:
+    am: 15
+    var: 0
+    dpf: 0.5
+    bias: 0
+    sd: 1
+    use: 0
+    cld: 1
+    cls: 0
+    sim: 4
+    inp: 9
+    prp:
+      col: 0
+      szF: 0
+      dec: 0
+      rem: 0
+      l: 1
+      lay: 0
+      t: 1
+      tag: 
+    ch:
+      tp: 0
+      frm: 3
+      frg: 4
+      skp: 0
+    sht: {fileID: 0}
+    rotStart: {x: 0, y: 0, z: 0, w: 1}
+  clusterDemolition:
+    connectivity: 0
+    minimumArea: 0
+    minimumSize: 0
+    percentage: 0
+    seed: 0
+    type: 0
+    ratio: 15
+    units: 1
+    shardArea: 100
+    shardDemolition: 0
+    minAmount: 3
+    maxAmount: 6
+    demolishable: 1
+    collapse:
+      type: 1
+      start: 0
+      end: 75
+      steps: 10
+      duration: 15
+      var: 0
+      seed: 0
+    clsCount: 1
+    cluster:
+      id: -1
+      tm: {fileID: 0}
+      depth: 0
+      pos: {x: 0, y: 0, z: 0}
+      rot: {x: 0, y: 0, z: 0, w: 0}
+      scl: {x: 0, y: 0, z: 0}
+      bound:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      demolishable: 1
+      rigid: {fileID: 0}
+      shards: []
+      cachedHost: 0
+      areaCollapse: 0
+      minimumArea: 0
+      maximumArea: 0
+      sizeCollapse: 0
+      minimumSize: 0
+      maximumSize: 0
+      randomCollapse: 0
+    minorClusters: []
+    cn: 0
+    nd: 0
+    am: 0
+  referenceDemolition:
+    reference: {fileID: 0}
+    randomList: []
+    action: 0
+    addRigid: 1
+    inheritScale: 1
+    inheritMaterials: 0
+  materials:
+    iMat: {fileID: 0}
+    oMat: {fileID: 0}
+    mScl: 0.1
+    uvE: 0
+    uvC: {x: 0, y: 0}
+    cE: 0
+    cC: {r: 0, g: 0, b: 0, a: 0}
+  damage:
+    en: 0
+    max: 100
+    cur: 0
+    col: 0
+    mlt: 1
+    shr: 0
+  fading:
+    onDemolition: 1
+    onActivation: 0
+    byOffset: 0
+    lifeType: 4
+    lifeTime: 7
+    lifeVariation: 3
+    fadeType: 0
+    fadeTime: 5
+    sizeFilter: 0
+    shardAmount: 5
+  reset:
+    transform: 1
+    damage: 1
+    connectivity: 0
+    action: 0
+    destroyDelay: 1
+    mesh: 4
+    fragments: 0
+  initialized: 0
+  rfMeshes: []
+  fragments: []
+  cacheRotation: {x: 0, y: 0, z: 0, w: 0}
+  transForm: {fileID: 0}
+  rootChild: {fileID: 0}
+  rootParent: {fileID: 0}
+  meshFilter: {fileID: 0}
+  meshRenderer: {fileID: 0}
+  skr: {fileID: 0}
+  rest: {fileID: 0}
+  sound: {fileID: 0}
 --- !u!1 &773210755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,6 +3337,219 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890363987}
   m_CullTransparentMesh: 1
+--- !u!1 &932269830 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3103844683641815020, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+  m_PrefabInstance: {fileID: 6659097830311326063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &932269832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932269830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446cd7feb7754492a858018f4b3e985f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsType: 2
+  durablity: 300
+  scoreValue: 900
+  noiseValue: 20
+  glassBroken: {fileID: 8300000, guid: b398ef0db4cc74638b30795f609c3e2b, type: 3}
+  brokenSound: {fileID: 8300000, guid: cf46fcb9dc5f641d783c478392b347fc, type: 3}
+  paperSound: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
+  textureSound: {fileID: 8300000, guid: f2b32a80bb2644cdbbd6c805bd5cb2cf, type: 3}
+--- !u!114 &932269833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932269830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6e52f37bca2404fac00b69fd8d21f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialization: 0
+  simulationType: 0
+  objectType: 0
+  demolitionType: 0
+  physics:
+    mt: 4
+    material: {fileID: 0}
+    massBy: 0
+    mass: 1
+    ct: 0
+    pc: 1
+    ine: 0
+    gr: 1
+    si: 6
+    st: 0.005
+    dm: 0.7
+    rigidBody: {fileID: 0}
+    meshCollider: {fileID: 0}
+    clusterColliders: []
+    ignoreList: 
+    exclude: 0
+    solidity: 1
+    destructible: 0
+  activation:
+    loc: 0
+    off: 0
+    vel: 0
+    dmg: 0
+    act: 0
+    imp: 0
+    con: 0
+    uny: 0
+    atb: 0
+    l: 0
+    lay: 0
+    cnt: {fileID: 0}
+  limitations:
+    col: 1
+    sol: 0.1
+    tag: Untagged
+    depth: 1
+    time: 0.2
+    size: 0.1
+    vis: 0
+    bld: 0
+    bound:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+  meshDemolition:
+    am: 15
+    var: 0
+    dpf: 0.5
+    bias: 0
+    sd: 1
+    use: 0
+    cld: 1
+    cls: 0
+    sim: 4
+    inp: 9
+    prp:
+      col: 0
+      szF: 0
+      dec: 0
+      rem: 0
+      l: 1
+      lay: 0
+      t: 1
+      tag: 
+    ch:
+      tp: 0
+      frm: 3
+      frg: 4
+      skp: 0
+    sht: {fileID: 0}
+    rotStart: {x: 0, y: 0, z: 0, w: 1}
+  clusterDemolition:
+    connectivity: 0
+    minimumArea: 0
+    minimumSize: 0
+    percentage: 0
+    seed: 0
+    type: 0
+    ratio: 15
+    units: 1
+    shardArea: 100
+    shardDemolition: 0
+    minAmount: 3
+    maxAmount: 6
+    demolishable: 1
+    collapse:
+      type: 1
+      start: 0
+      end: 75
+      steps: 10
+      duration: 15
+      var: 0
+      seed: 0
+    clsCount: 1
+    cluster:
+      id: -1
+      tm: {fileID: 0}
+      depth: 0
+      pos: {x: 0, y: 0, z: 0}
+      rot: {x: 0, y: 0, z: 0, w: 0}
+      scl: {x: 0, y: 0, z: 0}
+      bound:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      demolishable: 1
+      rigid: {fileID: 0}
+      shards: []
+      cachedHost: 0
+      areaCollapse: 0
+      minimumArea: 0
+      maximumArea: 0
+      sizeCollapse: 0
+      minimumSize: 0
+      maximumSize: 0
+      randomCollapse: 0
+    minorClusters: []
+    cn: 0
+    nd: 0
+    am: 0
+  referenceDemolition:
+    reference: {fileID: 0}
+    randomList: []
+    action: 0
+    addRigid: 1
+    inheritScale: 1
+    inheritMaterials: 0
+  materials:
+    iMat: {fileID: 0}
+    oMat: {fileID: 0}
+    mScl: 0.1
+    uvE: 0
+    uvC: {x: 0, y: 0}
+    cE: 0
+    cC: {r: 0, g: 0, b: 0, a: 0}
+  damage:
+    en: 0
+    max: 100
+    cur: 0
+    col: 0
+    mlt: 1
+    shr: 0
+  fading:
+    onDemolition: 1
+    onActivation: 0
+    byOffset: 0
+    lifeType: 4
+    lifeTime: 7
+    lifeVariation: 3
+    fadeType: 0
+    fadeTime: 5
+    sizeFilter: 0
+    shardAmount: 5
+  reset:
+    transform: 1
+    damage: 1
+    connectivity: 0
+    action: 0
+    destroyDelay: 1
+    mesh: 4
+    fragments: 0
+  initialized: 0
+  rfMeshes: []
+  fragments: []
+  cacheRotation: {x: 0, y: 0, z: 0, w: 0}
+  transForm: {fileID: 0}
+  rootChild: {fileID: 0}
+  rootParent: {fileID: 0}
+  meshFilter: {fileID: 0}
+  meshRenderer: {fileID: 0}
+  skr: {fileID: 0}
+  rest: {fileID: 0}
+  sound: {fileID: 0}
 --- !u!1 &963726255
 GameObject:
   m_ObjectHideFlags: 0
@@ -2890,6 +3742,219 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1107244936 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5763372931808038162, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+  m_PrefabInstance: {fileID: 6659097830311326063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1107244938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107244936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446cd7feb7754492a858018f4b3e985f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsType: 2
+  durablity: 200
+  scoreValue: 600
+  noiseValue: 20
+  glassBroken: {fileID: 8300000, guid: b398ef0db4cc74638b30795f609c3e2b, type: 3}
+  brokenSound: {fileID: 8300000, guid: cf46fcb9dc5f641d783c478392b347fc, type: 3}
+  paperSound: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
+  textureSound: {fileID: 8300000, guid: f2b32a80bb2644cdbbd6c805bd5cb2cf, type: 3}
+--- !u!114 &1107244939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107244936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6e52f37bca2404fac00b69fd8d21f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialization: 0
+  simulationType: 0
+  objectType: 0
+  demolitionType: 0
+  physics:
+    mt: 4
+    material: {fileID: 0}
+    massBy: 0
+    mass: 1
+    ct: 0
+    pc: 1
+    ine: 0
+    gr: 1
+    si: 6
+    st: 0.005
+    dm: 0.7
+    rigidBody: {fileID: 0}
+    meshCollider: {fileID: 0}
+    clusterColliders: []
+    ignoreList: 
+    exclude: 0
+    solidity: 1
+    destructible: 0
+  activation:
+    loc: 0
+    off: 0
+    vel: 0
+    dmg: 0
+    act: 0
+    imp: 0
+    con: 0
+    uny: 0
+    atb: 0
+    l: 0
+    lay: 0
+    cnt: {fileID: 0}
+  limitations:
+    col: 1
+    sol: 0.1
+    tag: Untagged
+    depth: 1
+    time: 0.2
+    size: 0.1
+    vis: 0
+    bld: 0
+    bound:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+  meshDemolition:
+    am: 15
+    var: 0
+    dpf: 0.5
+    bias: 0
+    sd: 1
+    use: 0
+    cld: 1
+    cls: 0
+    sim: 4
+    inp: 9
+    prp:
+      col: 0
+      szF: 0
+      dec: 0
+      rem: 0
+      l: 1
+      lay: 0
+      t: 1
+      tag: 
+    ch:
+      tp: 0
+      frm: 3
+      frg: 4
+      skp: 0
+    sht: {fileID: 0}
+    rotStart: {x: 0, y: 0, z: 0, w: 1}
+  clusterDemolition:
+    connectivity: 0
+    minimumArea: 0
+    minimumSize: 0
+    percentage: 0
+    seed: 0
+    type: 0
+    ratio: 15
+    units: 1
+    shardArea: 100
+    shardDemolition: 0
+    minAmount: 3
+    maxAmount: 6
+    demolishable: 1
+    collapse:
+      type: 1
+      start: 0
+      end: 75
+      steps: 10
+      duration: 15
+      var: 0
+      seed: 0
+    clsCount: 1
+    cluster:
+      id: -1
+      tm: {fileID: 0}
+      depth: 0
+      pos: {x: 0, y: 0, z: 0}
+      rot: {x: 0, y: 0, z: 0, w: 0}
+      scl: {x: 0, y: 0, z: 0}
+      bound:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      demolishable: 1
+      rigid: {fileID: 0}
+      shards: []
+      cachedHost: 0
+      areaCollapse: 0
+      minimumArea: 0
+      maximumArea: 0
+      sizeCollapse: 0
+      minimumSize: 0
+      maximumSize: 0
+      randomCollapse: 0
+    minorClusters: []
+    cn: 0
+    nd: 0
+    am: 0
+  referenceDemolition:
+    reference: {fileID: 0}
+    randomList: []
+    action: 0
+    addRigid: 1
+    inheritScale: 1
+    inheritMaterials: 0
+  materials:
+    iMat: {fileID: 0}
+    oMat: {fileID: 0}
+    mScl: 0.1
+    uvE: 0
+    uvC: {x: 0, y: 0}
+    cE: 0
+    cC: {r: 0, g: 0, b: 0, a: 0}
+  damage:
+    en: 0
+    max: 100
+    cur: 0
+    col: 0
+    mlt: 1
+    shr: 0
+  fading:
+    onDemolition: 1
+    onActivation: 0
+    byOffset: 0
+    lifeType: 4
+    lifeTime: 7
+    lifeVariation: 3
+    fadeType: 0
+    fadeTime: 5
+    sizeFilter: 0
+    shardAmount: 5
+  reset:
+    transform: 1
+    damage: 1
+    connectivity: 0
+    action: 0
+    destroyDelay: 1
+    mesh: 4
+    fragments: 0
+  initialized: 0
+  rfMeshes: []
+  fragments: []
+  cacheRotation: {x: 0, y: 0, z: 0, w: 0}
+  transForm: {fileID: 0}
+  rootChild: {fileID: 0}
+  rootParent: {fileID: 0}
+  meshFilter: {fileID: 0}
+  meshRenderer: {fileID: 0}
+  skr: {fileID: 0}
+  rest: {fileID: 0}
+  sound: {fileID: 0}
 --- !u!1 &1120678373
 GameObject:
   m_ObjectHideFlags: 0
@@ -4184,7 +5249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24c7b6805ddd4654a1fbe2c1d09920b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 300
+  timeRemaining: 180
   timerIsRunning: 0
   timerText: {fileID: 1987188462}
 --- !u!82 &1678928439
@@ -4307,7 +5372,7 @@ MonoBehaviour:
   handleAnimator: {fileID: 890363989}
   noiseValue: 0
   noiseMaxValue: 100
-  noiseReduceSpeed: 0.5
+  noiseReduceSpeed: 0.75
 --- !u!1001 &1717051161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5802,6 +6867,454 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1882170087 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7651841797200474579, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+  m_PrefabInstance: {fileID: 7955453980730346637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1882170096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882170087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446cd7feb7754492a858018f4b3e985f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsType: 2
+  durablity: 600
+  scoreValue: 2000
+  noiseValue: 10
+  glassBroken: {fileID: 8300000, guid: b398ef0db4cc74638b30795f609c3e2b, type: 3}
+  brokenSound: {fileID: 8300000, guid: cf46fcb9dc5f641d783c478392b347fc, type: 3}
+  paperSound: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
+  textureSound: {fileID: 8300000, guid: f2b32a80bb2644cdbbd6c805bd5cb2cf, type: 3}
+--- !u!114 &1882170097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882170087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6e52f37bca2404fac00b69fd8d21f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialization: 0
+  simulationType: 0
+  objectType: 0
+  demolitionType: 0
+  physics:
+    mt: 4
+    material: {fileID: 0}
+    massBy: 0
+    mass: 1
+    ct: 0
+    pc: 1
+    ine: 0
+    gr: 1
+    si: 6
+    st: 0.005
+    dm: 0.7
+    rigidBody: {fileID: 0}
+    meshCollider: {fileID: 0}
+    clusterColliders: []
+    ignoreList: 
+    exclude: 0
+    solidity: 1
+    destructible: 0
+  activation:
+    loc: 0
+    off: 0
+    vel: 0
+    dmg: 0
+    act: 0
+    imp: 0
+    con: 0
+    uny: 0
+    atb: 0
+    l: 0
+    lay: 0
+    cnt: {fileID: 0}
+  limitations:
+    col: 1
+    sol: 0.1
+    tag: Untagged
+    depth: 1
+    time: 0.2
+    size: 0.1
+    vis: 0
+    bld: 0
+    bound:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+  meshDemolition:
+    am: 15
+    var: 0
+    dpf: 0.5
+    bias: 0
+    sd: 1
+    use: 0
+    cld: 1
+    cls: 0
+    sim: 4
+    inp: 9
+    prp:
+      col: 0
+      szF: 0
+      dec: 0
+      rem: 0
+      l: 1
+      lay: 0
+      t: 1
+      tag: 
+    ch:
+      tp: 0
+      frm: 3
+      frg: 4
+      skp: 0
+    sht: {fileID: 0}
+    rotStart: {x: 0, y: 0, z: 0, w: 1}
+  clusterDemolition:
+    connectivity: 0
+    minimumArea: 0
+    minimumSize: 0
+    percentage: 0
+    seed: 0
+    type: 0
+    ratio: 15
+    units: 1
+    shardArea: 100
+    shardDemolition: 0
+    minAmount: 3
+    maxAmount: 6
+    demolishable: 1
+    collapse:
+      type: 1
+      start: 0
+      end: 75
+      steps: 10
+      duration: 15
+      var: 0
+      seed: 0
+    clsCount: 1
+    cluster:
+      id: -1
+      tm: {fileID: 0}
+      depth: 0
+      pos: {x: 0, y: 0, z: 0}
+      rot: {x: 0, y: 0, z: 0, w: 0}
+      scl: {x: 0, y: 0, z: 0}
+      bound:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      demolishable: 1
+      rigid: {fileID: 0}
+      shards: []
+      cachedHost: 0
+      areaCollapse: 0
+      minimumArea: 0
+      maximumArea: 0
+      sizeCollapse: 0
+      minimumSize: 0
+      maximumSize: 0
+      randomCollapse: 0
+    minorClusters: []
+    cn: 0
+    nd: 0
+    am: 0
+  referenceDemolition:
+    reference: {fileID: 0}
+    randomList: []
+    action: 0
+    addRigid: 1
+    inheritScale: 1
+    inheritMaterials: 0
+  materials:
+    iMat: {fileID: 0}
+    oMat: {fileID: 0}
+    mScl: 0.1
+    uvE: 0
+    uvC: {x: 0, y: 0}
+    cE: 0
+    cC: {r: 0, g: 0, b: 0, a: 0}
+  damage:
+    en: 0
+    max: 100
+    cur: 0
+    col: 0
+    mlt: 1
+    shr: 0
+  fading:
+    onDemolition: 1
+    onActivation: 0
+    byOffset: 0
+    lifeType: 4
+    lifeTime: 7
+    lifeVariation: 3
+    fadeType: 0
+    fadeTime: 5
+    sizeFilter: 0
+    shardAmount: 5
+  reset:
+    transform: 1
+    damage: 1
+    connectivity: 0
+    action: 0
+    destroyDelay: 1
+    mesh: 4
+    fragments: 0
+  initialized: 0
+  rfMeshes: []
+  fragments: []
+  cacheRotation: {x: 0, y: 0, z: 0, w: 0}
+  transForm: {fileID: 0}
+  rootChild: {fileID: 0}
+  rootParent: {fileID: 0}
+  meshFilter: {fileID: 0}
+  meshRenderer: {fileID: 0}
+  skr: {fileID: 0}
+  rest: {fileID: 0}
+  sound: {fileID: 0}
+--- !u!1 &1883879626 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2732232002089268563, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+  m_PrefabInstance: {fileID: 6659097830311326063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1883879628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883879626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446cd7feb7754492a858018f4b3e985f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsType: 2
+  durablity: 100
+  scoreValue: 200
+  noiseValue: 20
+  glassBroken: {fileID: 8300000, guid: b398ef0db4cc74638b30795f609c3e2b, type: 3}
+  brokenSound: {fileID: 8300000, guid: cf46fcb9dc5f641d783c478392b347fc, type: 3}
+  paperSound: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
+  textureSound: {fileID: 8300000, guid: f2b32a80bb2644cdbbd6c805bd5cb2cf, type: 3}
+--- !u!64 &1883879629
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883879626}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!114 &1883879630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883879626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6e52f37bca2404fac00b69fd8d21f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialization: 0
+  simulationType: 0
+  objectType: 0
+  demolitionType: 0
+  physics:
+    mt: 4
+    material: {fileID: 0}
+    massBy: 0
+    mass: 1
+    ct: 0
+    pc: 1
+    ine: 0
+    gr: 1
+    si: 6
+    st: 0.005
+    dm: 0.7
+    rigidBody: {fileID: 0}
+    meshCollider: {fileID: 0}
+    clusterColliders: []
+    ignoreList: 
+    exclude: 0
+    solidity: 1
+    destructible: 0
+  activation:
+    loc: 0
+    off: 0
+    vel: 0
+    dmg: 0
+    act: 0
+    imp: 0
+    con: 0
+    uny: 0
+    atb: 0
+    l: 0
+    lay: 0
+    cnt: {fileID: 0}
+  limitations:
+    col: 1
+    sol: 0.1
+    tag: Untagged
+    depth: 1
+    time: 0.2
+    size: 0.1
+    vis: 0
+    bld: 0
+    bound:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+  meshDemolition:
+    am: 15
+    var: 0
+    dpf: 0.5
+    bias: 0
+    sd: 1
+    use: 0
+    cld: 1
+    cls: 0
+    sim: 4
+    inp: 9
+    prp:
+      col: 0
+      szF: 0
+      dec: 0
+      rem: 0
+      l: 1
+      lay: 0
+      t: 1
+      tag: 
+    ch:
+      tp: 0
+      frm: 3
+      frg: 4
+      skp: 0
+    sht: {fileID: 0}
+    rotStart: {x: 0, y: 0, z: 0, w: 1}
+  clusterDemolition:
+    connectivity: 0
+    minimumArea: 0
+    minimumSize: 0
+    percentage: 0
+    seed: 0
+    type: 0
+    ratio: 15
+    units: 1
+    shardArea: 100
+    shardDemolition: 0
+    minAmount: 3
+    maxAmount: 6
+    demolishable: 1
+    collapse:
+      type: 1
+      start: 0
+      end: 75
+      steps: 10
+      duration: 15
+      var: 0
+      seed: 0
+    clsCount: 1
+    cluster:
+      id: -1
+      tm: {fileID: 0}
+      depth: 0
+      pos: {x: 0, y: 0, z: 0}
+      rot: {x: 0, y: 0, z: 0, w: 0}
+      scl: {x: 0, y: 0, z: 0}
+      bound:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      demolishable: 1
+      rigid: {fileID: 0}
+      shards: []
+      cachedHost: 0
+      areaCollapse: 0
+      minimumArea: 0
+      maximumArea: 0
+      sizeCollapse: 0
+      minimumSize: 0
+      maximumSize: 0
+      randomCollapse: 0
+    minorClusters: []
+    cn: 0
+    nd: 0
+    am: 0
+  referenceDemolition:
+    reference: {fileID: 0}
+    randomList: []
+    action: 0
+    addRigid: 1
+    inheritScale: 1
+    inheritMaterials: 0
+  materials:
+    iMat: {fileID: 0}
+    oMat: {fileID: 0}
+    mScl: 0.1
+    uvE: 0
+    uvC: {x: 0, y: 0}
+    cE: 0
+    cC: {r: 0, g: 0, b: 0, a: 0}
+  damage:
+    en: 0
+    max: 100
+    cur: 0
+    col: 0
+    mlt: 1
+    shr: 0
+  fading:
+    onDemolition: 1
+    onActivation: 0
+    byOffset: 0
+    lifeType: 4
+    lifeTime: 7
+    lifeVariation: 3
+    fadeType: 0
+    fadeTime: 5
+    sizeFilter: 0
+    shardAmount: 5
+  reset:
+    transform: 1
+    damage: 1
+    connectivity: 0
+    action: 0
+    destroyDelay: 1
+    mesh: 4
+    fragments: 0
+  initialized: 0
+  rfMeshes: []
+  fragments: []
+  cacheRotation: {x: 0, y: 0, z: 0, w: 0}
+  transForm: {fileID: 0}
+  rootChild: {fileID: 0}
+  rootParent: {fileID: 0}
+  meshFilter: {fileID: 0}
+  meshRenderer: {fileID: 0}
+  skr: {fileID: 0}
+  rest: {fileID: 0}
+  sound: {fileID: 0}
 --- !u!1 &1906965245 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6576855475035769288, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
@@ -5976,14 +7489,13 @@ GameObject:
   - component: {fileID: 1996072995}
   - component: {fileID: 1996072994}
   - component: {fileID: 1996072993}
-  - component: {fileID: 1996072992}
   m_Layer: 5
   m_Name: ChatBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1996072991
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6004,18 +7516,6 @@ RectTransform:
   m_AnchoredPosition: {x: 104.015015, y: 86.12256}
   m_SizeDelta: {x: 302.6205, y: 294.0331}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1996072992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1996072990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d374d646999a147a5ab210323d75f069, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!225 &1996072993
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6081,7 +7581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2060650630
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8592,6 +10092,14 @@ PrefabInstance:
       propertyPath: noiseValue
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1145817346086523750, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+      propertyPath: noiseValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498179761006629209, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+      propertyPath: noiseValue
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1533901503697108727, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
       propertyPath: noiseValue
       value: 5
@@ -8676,6 +10184,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4454072576500992881, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+      propertyPath: noiseValue
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4485417622708015048, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
       propertyPath: noiseValue
       value: 5
@@ -8720,6 +10232,10 @@ PrefabInstance:
       propertyPath: noiseValue
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6316137336712302475, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+      propertyPath: noiseValue
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6409762344999762993, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
       propertyPath: noiseValue
       value: 5
@@ -8737,6 +10253,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7370515896230494554, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+      propertyPath: noiseValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7494703977111682042, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
       propertyPath: noiseValue
       value: 5
       objectReference: {fileID: 0}
@@ -9183,7 +10703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 928739297556502739, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: noiseValue
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 928739297556502739, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -9278,6 +10798,10 @@ PrefabInstance:
       value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 2061884639053944240, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061884639053944240, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
       value: 
       objectReference: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
@@ -9304,6 +10828,10 @@ PrefabInstance:
     - target: {fileID: 2535551519430299216, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: durablity
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535551519430299216, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2535551519430299216, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -9379,7 +10907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4319502225357991580, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: noiseValue
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4319502225357991580, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -9418,6 +10946,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4945923783310126897, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945923783310126897, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
       value: 
       objectReference: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
@@ -9448,6 +10980,10 @@ PrefabInstance:
     - target: {fileID: 5291336914412318702, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: durablity
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291336914412318702, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5291336914412318702, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -9486,6 +11022,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6099377285166974668, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6099377285166974668, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
       value: 
       objectReference: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
@@ -9512,6 +11052,10 @@ PrefabInstance:
     - target: {fileID: 6121614601793902372, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: durablity
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121614601793902372, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6121614601793902372, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -9550,6 +11094,10 @@ PrefabInstance:
       value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6454454450402837604, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454454450402837604, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
       value: 
       objectReference: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
@@ -9576,6 +11124,10 @@ PrefabInstance:
     - target: {fileID: 6998871455077509084, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: durablity
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6998871455077509084, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6998871455077509084, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -9608,6 +11160,10 @@ PrefabInstance:
     - target: {fileID: 7688741440304090316, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: durablity
       value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688741440304090316, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7688741440304090316, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -9642,6 +11198,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8290638481691158018, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8290638481691158018, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
       value: 
       objectReference: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
@@ -9672,6 +11232,10 @@ PrefabInstance:
     - target: {fileID: 8419213238648991316, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: durablity
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419213238648991316, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8419213238648991316, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -9707,7 +11271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8470990614622616426, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: noiseValue
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8470990614622616426, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -9754,6 +11318,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8816289918900786385, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816289918900786385, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
       value: 
       objectReference: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
@@ -9787,12 +11355,24 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 963726256}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1220217838284857128, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 104042768}
+    - targetCorrespondingSourceObject: {fileID: 1220217838284857128, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 104042767}
     - targetCorrespondingSourceObject: {fileID: 6564119761818964602, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       insertIndex: -1
       addedObject: {fileID: 997764572}
     - targetCorrespondingSourceObject: {fileID: 6564119761818964602, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       insertIndex: -1
       addedObject: {fileID: 997764573}
+    - targetCorrespondingSourceObject: {fileID: 7651841797200474579, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1882170097}
+    - targetCorrespondingSourceObject: {fileID: 7651841797200474579, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1882170096}
     - targetCorrespondingSourceObject: {fileID: 2162708118603735472, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1719680586}
