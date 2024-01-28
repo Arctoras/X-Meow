@@ -12,6 +12,7 @@ public class ScoreItems : MonoBehaviour
         Dynamic,
         Fragile,
         Interactive,
+        Ball,
     }
 
     public ObjectsType objectsType;
@@ -38,6 +39,9 @@ public class ScoreItems : MonoBehaviour
             case ObjectsType.Fragile:
                 //broken
                 _rayfireRigid = GetComponent<RayfireRigid>();
+                break;
+            case ObjectsType.Ball:
+                //add force
                 break;
         }
     }
@@ -89,5 +93,10 @@ public class ScoreItems : MonoBehaviour
         //sound
         // Destroy(gameObject);
         //other destory effects
+    }
+
+    public void AddScoreOnly()
+    {
+        GameManager.Instance.AddScore(scoreValue);
     }
 }

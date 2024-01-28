@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     [SerializeField, Min(0)] float bodyTurnSpeed;
     [SerializeField, Range(0,90)] float headTurnBounds;
 
+    public float forceMagnitude = 10f;
+
 
     /*bool canJump = false;*/
 
@@ -63,13 +65,16 @@ public class Player : MonoBehaviour
                 {
                     case ScoreItems.ObjectsType.Dynamic:
                         scoreItems.ApplyDamage(50f);
-                        //sound
-                        //vfx
                         break;
                     case ScoreItems.ObjectsType.Fragile:
                         scoreItems.ApplyDamage(50f);
-                        //sfx
-                        //vfx
+                        break;
+                    case ScoreItems.ObjectsType.Ball:
+                        Vector3 relativePostion = interactable.transform.position - transform.position;
+                        Vector3 force = relativePostion.normalized * forceMagnitude;
+                        
+                        interactable.GetComponent<Rigidbody>().AddForce(force);
+                        GameManager.Instance.AddScore(scoreItems.scoreValue);
                         break;
                     default:
                         break;
