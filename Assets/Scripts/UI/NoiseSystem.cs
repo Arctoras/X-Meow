@@ -17,6 +17,8 @@ public class NoiseSystem : MonoBehaviour
     [SerializeField] private Sprite YellowHandle;
     [SerializeField] private Sprite RedHandle;
 
+    [SerializeField] private Animator handleAnimator;
+
     [SerializeField] private float noiseValue;
     [SerializeField] private float noiseMaxValue = 100;
     [SerializeField] private float noiseReduceSpeed = 1;
@@ -80,16 +82,26 @@ public class NoiseSystem : MonoBehaviour
         {
             barFillImg.sprite = GreenBar;
             handleImg.sprite = GreenHandle;
+            if (handleAnimator.speed <= 0.01f)
+            {
+                handleAnimator.speed = 0f;
+            }
+            else
+            {
+                handleAnimator.speed = 0.5f;
+            }
         }
         else if (barValue < 0.7f)
         {
             barFillImg.sprite = YellowBar;
             handleImg.sprite = YellowHandle;
+            handleAnimator.speed = 1.5f;
         }
         else
         {
             barFillImg.sprite = RedBar;
             handleImg.sprite = RedHandle;
+            handleAnimator.speed = 3;
         }
     }
 

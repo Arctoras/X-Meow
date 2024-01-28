@@ -70,6 +70,8 @@ public class ScoreItems : MonoBehaviour
     public void ApplyDamage(float damage)
     {
         durablity -= damage;
+        if (_noiseSystem != null)
+            _noiseSystem.AddNoise(noiseValue /2f);
         CheckForDestruction();
         
     }
