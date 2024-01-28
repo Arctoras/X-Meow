@@ -42,8 +42,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         _noiseSystem = FindObjectOfType<NoiseSystem>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        
     }
 
     // Update is called once per frame
@@ -52,9 +51,8 @@ public class Player : MonoBehaviour
         if(GameManager.Instance.isGameOver)
         {
             animator.speed = 0;
-
         }
-        else
+        else if(GameManager.Instance.isGameStarted)
         {
             Move();
             Turn();

@@ -7,26 +7,34 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public float maxAlertLevel = 100f;
-    public float alertDecreaseRate = 0.5f;
-    public float timeToStartDecrease = 5f;
+    // public float maxAlertLevel = 100f;
+    // public float alertDecreaseRate = 0.5f;
+    // public float timeToStartDecrease = 5f;
+
+    public int totalBlocks = 5;
+    private int clickedBlocks = 0;
     
     private float currentAlertLevel = 0f;
     private float timeSinceLastDetected = 0f;
 
     public int score = 0;
     public TextMeshProUGUI scoreText;
+    public GameObject gameManager;
+    public GameObject gameCanvas;
 
     public Image GameOverImage;
     public Sprite TimeUpSprite;
     public Sprite LoudSoundSprite;
     public TMP_Text GameOverScore;
 
+    public bool isGameStarted = false;
     public bool isGameOver = false;
     
     void Awake()
     {
         GameOverImage.gameObject.SetActive(false);
+        gameManager.GetComponent<Timer>().enabled = false;
+        gameCanvas.SetActive(false);
 
         if (Instance == null)
         {
@@ -45,6 +53,24 @@ public class GameManager : MonoBehaviour
         score = 0;
         UpdateScoreText();
         //Maybe Fade In?
+    }
+
+    public void BlockClicked()
+    {
+        clickedBlocks++;
+        if (clickedBlocks >= totalBlocks)
+        {
+            Invoke(nameof(StartGame),1f);
+        }
+    }
+
+    public void StartGame()
+    {
+        isGameStarted = true;
+        gameManager.GetComponent<Timer>().enabled = true;
+        gameCanvas.SetActive(true);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update()
