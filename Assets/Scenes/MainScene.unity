@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1197,6 +1197,7 @@ MonoBehaviour:
   objectsType: 4
   durablity: 100
   scoreValue: 50
+  noiseValue: 20
 --- !u!54 &146073644
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1346,6 +1347,7 @@ MonoBehaviour:
   objectsType: 4
   durablity: 100
   scoreValue: 50
+  noiseValue: 20
 --- !u!54 &188427280
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1531,6 +1533,7 @@ MonoBehaviour:
   objectsType: 4
   durablity: 100
   scoreValue: 50
+  noiseValue: 20
 --- !u!54 &309214167
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2460,6 +2463,7 @@ MonoBehaviour:
   objectsType: 4
   durablity: 100
   scoreValue: 50
+  noiseValue: 20
 --- !u!54 &644585838
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3604,6 +3608,7 @@ MonoBehaviour:
   objectsType: 2
   durablity: 50
   scoreValue: 100
+  noiseValue: 20
 --- !u!114 &906079216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4673,6 +4678,7 @@ MonoBehaviour:
   objectsType: 4
   durablity: 100
   scoreValue: 50
+  noiseValue: 20
 --- !u!54 &1207871923
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5327,8 +5333,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 207, y: -65}
-  m_SizeDelta: {x: 400, y: 150}
+  m_AnchoredPosition: {x: 207, y: -58.2}
+  m_SizeDelta: {x: 400, y: 167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1432135411
 MonoBehaviour:
@@ -5377,8 +5383,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 84.3
-  m_fontSizeBase: 84.3
+  m_fontSize: 107.9
+  m_fontSizeBase: 107.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5719,6 +5725,7 @@ MonoBehaviour:
   objectsType: 4
   durablity: 100
   scoreValue: 50
+  noiseValue: 20
 --- !u!54 &1541330025
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5953,6 +5960,7 @@ MonoBehaviour:
   TimeUpSprite: {fileID: 21300000, guid: a1b38ace832e4f9439ba8c0998521008, type: 3}
   LoudSoundSprite: {fileID: 21300000, guid: 7238e98abe88df046b13f3c5ea37b94d, type: 3}
   GameOverScore: {fileID: 1432135411}
+  isGameOver: 0
 --- !u!4 &1678928436
 Transform:
   m_ObjectHideFlags: 0
@@ -6852,6 +6860,7 @@ MonoBehaviour:
   objectsType: 2
   durablity: 50
   scoreValue: 100
+  noiseValue: 20
 --- !u!114 &2038766081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7222,7 +7231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a1b38ace832e4f9439ba8c0998521008, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7238e98abe88df046b13f3c5ea37b94d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8405,6 +8414,7 @@ MonoBehaviour:
   objectsType: 2
   durablity: 100
   scoreValue: 300
+  noiseValue: 20
 --- !u!114 &5923058106231256269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9060,6 +9070,7 @@ MonoBehaviour:
   objectsType: 2
   durablity: 100
   scoreValue: 300
+  noiseValue: 20
 --- !u!114 &7182045190522662913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9365,6 +9376,7 @@ MonoBehaviour:
   objectsType: 2
   durablity: 50
   scoreValue: 150
+  noiseValue: 20
 --- !u!114 &7839509564182737113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9649,6 +9661,7 @@ MonoBehaviour:
   objectsType: 2
   durablity: 100
   scoreValue: 300
+  noiseValue: 20
 --- !u!114 &7895305465736394182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10047,6 +10060,7 @@ MonoBehaviour:
   objectsType: 2
   durablity: 50
   scoreValue: 150
+  noiseValue: 20
 --- !u!114 &8064450875854934836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10287,6 +10301,7 @@ MonoBehaviour:
   objectsType: 2
   durablity: 100
   scoreValue: 300
+  noiseValue: 20
 --- !u!114 &8428229006778528072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11029,6 +11044,7 @@ MonoBehaviour:
   objectsType: 2
   durablity: 50
   scoreValue: 150
+  noiseValue: 20
 --- !u!114 &8562090486707973162
 MonoBehaviour:
   m_ObjectHideFlags: 0

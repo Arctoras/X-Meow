@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
 
     Rigidbody rb;
     Animator animator;
+    private NoiseSystem _noiseSystem;
 
     [SerializeField]UnityEvent OnDestroyItem;
 
@@ -40,6 +41,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        _noiseSystem = FindObjectOfType<NoiseSystem>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -86,6 +88,7 @@ public class Player : MonoBehaviour
                         
                         interactable.GetComponent<Rigidbody>().AddForce(force);
                         GameManager.Instance.AddScore(scoreItems.scoreValue);
+                        _noiseSystem.AddNoise(10f);
                         break;
                     default:
                         break;
