@@ -11,8 +11,6 @@ public class Player : MonoBehaviour
     [SerializeField, Min(0)] float strafeMultiplier;
     [SerializeField, Min(1)] float sprintMultiplier;
 
-    /*[SerializeField, Min(0)] float maxJumpForce;
-    [SerializeField, Min(0.00001f)] float jumpChargeTime;**/
     [SerializeField] float JumpForce = 8f;
 
     [SerializeField, Min(0)] float headTurnSpeed;
@@ -21,15 +19,8 @@ public class Player : MonoBehaviour
 
     public float forceMagnitude = 10f;
 
-
-    /*bool canJump = false;*/
-
     public GameObject impactPrefab;
     public AudioClip impactSound;
-
-    bool canJump = false;
-    float jumpForce = 0;
-
 
     Rigidbody rb;
     Animator animator;
@@ -66,7 +57,6 @@ public class Player : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1")  || Input.GetButtonDown("Fire2"))
         {
-            Debug.Log(interactable.name);
             ScoreItems scoreItems = interactable.GetComponent<ScoreItems>();
             if (scoreItems != null)
             {
@@ -138,7 +128,6 @@ public class Player : MonoBehaviour
 
         //laser detect if the player is on the ground
         bool canJump = false;
-        Debug.DrawRay(transform.position, Vector3.down * 1.1f, Color.red);
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.1f))
         {
