@@ -45,9 +45,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        Turn();
-        Smack();
+        if(GameManager.Instance.isGameOver)
+        {
+            animator.speed = 0;
+
+        }
+        else
+        {
+            Move();
+            Turn();
+            Smack();
+        }
     }
     void Interact(Collider interactable)
     {

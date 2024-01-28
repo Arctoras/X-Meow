@@ -64,7 +64,7 @@ public class NoiseSystem : MonoBehaviour
         Debug.Log("Game Over!");
         if (gameManager != null)
         {
-            gameManager.GameOver();
+            gameManager.GameOver(false);
         }
         else
         {

@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,18 +16,28 @@ public class GameManager : MonoBehaviour
 
     public int score = 0;
     public TextMeshProUGUI scoreText;
+
+    public Image GameOverImage;
+    public Sprite TimeUpSprite;
+    public Sprite LoudSoundSprite;
+    public TMP_Text GameOverScore;
+
+    public bool isGameOver = false;
     
     void Awake()
     {
+        GameOverImage.gameObject.SetActive(false);
+
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); 
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+        
     }
     
     private void Start()
@@ -89,9 +100,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GameOver()
+    public void GameOver(bool isTimeOut)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        isGameOver = true;
+        GameOverImage.gameObject.SetActive(true);
+        GameOverScore.text = score.ToString();
+        if (isTimeOut)
+        {
+            GameOverImage.sprite = TimeUpSprite;
+        }
+        else
+        {
+            GameOverImage.sprite = LoudSoundSprite;
+        }
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void RestartGame()

@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
 
     public TextMeshProUGUI timerText;
 
-    public UnityEvent onTimerEnd;
+    
     private void Start()
     {
         timerIsRunning = true;
@@ -31,7 +31,7 @@ public class Timer : MonoBehaviour
             {
                 timeRemaining = 0;
                 timerIsRunning = false;
-                onTimerEnd.Invoke();
+                GameManager.Instance.GameOver(true);
             }
         }
     }
