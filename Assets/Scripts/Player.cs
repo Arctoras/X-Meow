@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     [SerializeField, Min(0)] float bodyTurnSpeed;
     [SerializeField, Range(0,90)] float headTurnBounds;
 
+    bool canMove = true;
+
     public float forceMagnitude = 10f;
 
     public GameObject impactPrefab;
@@ -48,7 +50,7 @@ public class Player : MonoBehaviour
         }
         else if(GameManager.Instance.isGameStarted)
         {
-            Move();
+            if (canMove) Move();
             Turn();
             Smack();
         }
@@ -96,11 +98,11 @@ public class Player : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            animator.Play("Smack1");
+            animator.Play("Smack_L");
         }
         if (Input.GetButtonDown("Fire2"))
         {
-            animator.Play("Smack2");
+            animator.Play("Smack_R");
         }
     }
 
@@ -143,11 +145,20 @@ public class Player : MonoBehaviour
 
         if(canJump && Input.GetButtonDown("Jump"))
         {
-            rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+            StartCoroutine(Jump());
         }
     }
     private void OnTriggerStay(Collider other)
     {
         Interact(other);
+    }
+
+    IEnumerator Jump()
+    {
+        canMove = false;
+        animator.Play("Jump");
+        yield return new WaitForSeconds(0.25f);
+        canMove = true;
+        rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
     }
 }
