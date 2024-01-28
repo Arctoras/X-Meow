@@ -6,6 +6,8 @@ TagManager:
   tags:
   - FxTemporaire
   - GlassObjects
+  - Paper
+  - TextureStuff
   layers:
   - Default
   - TransparentFX

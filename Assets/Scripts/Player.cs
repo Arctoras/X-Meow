@@ -136,7 +136,7 @@ public class Player : MonoBehaviour
         }
         transform.Translate(new Vector3(displacement.x * strafeMultiplier, 0, displacement.y), Space.Self);
 
-        //layser detect if the player is on the ground
+        //laser detect if the player is on the ground
         bool canJump = false;
         Debug.DrawRay(transform.position, Vector3.down * 1.1f, Color.red);
         RaycastHit hit;

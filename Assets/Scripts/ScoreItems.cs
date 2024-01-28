@@ -19,13 +19,16 @@ public class ScoreItems : MonoBehaviour
     GameObject player;
 
     public float durablity = 100f;
-    public int scoreValue = 10;
+    public int scoreValue = 100;
     public float noiseValue = 20f;
     private bool _isDestoryed = false;
     private RayfireRigid _rayfireRigid;
     private NoiseSystem _noiseSystem;
 
     public AudioClip glassBroken;
+    public AudioClip brokenSound;
+    public AudioClip paperSound;
+    public AudioClip textureSound;
     private AudioSource playerAudioSource;
 
     private void Start()
@@ -98,6 +101,19 @@ public class ScoreItems : MonoBehaviour
         {
             playerAudioSource.PlayOneShot(glassBroken);
         }
+        else if (gameObject.CompareTag("Paper"))
+        {
+            playerAudioSource.PlayOneShot(paperSound);
+        }
+        else if (gameObject.CompareTag("TextureStuff"))
+        {
+            playerAudioSource.PlayOneShot(textureSound);
+        }
+        else
+        {
+            playerAudioSource.PlayOneShot(brokenSound);
+        }
+        
         _isDestoryed = true;
         GameManager.Instance.AddScore(scoreValue);
 
