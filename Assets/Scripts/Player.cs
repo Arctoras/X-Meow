@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
     }
     void Interact(Collider interactable)
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+        if (Input.GetButtonDown("Fire1")  || Input.GetButtonDown("Fire2"))
         {
             Debug.Log(interactable.name);
             ScoreItems scoreItems = interactable.GetComponent<ScoreItems>();
@@ -110,16 +110,6 @@ public class Player : MonoBehaviour
             animator.SetInteger("State", 2);
         }
         transform.Translate(new Vector3(displacement.x * strafeMultiplier, 0, displacement.y), Space.Self);
-        /*if(canJump && Input.GetButton("Jump"))
-        {
-            jumpForce = Mathf.Min(maxJumpForce, jumpForce + (maxJumpForce * ( Time.deltaTime / jumpChargeTime)));
-            animator.SetInteger("State", 3);
-        }
-        if(canJump && Input.GetButtonUp("Jump"))
-        {
-            rb.AddForce(Vector3.up * jumpForce);
-            jumpForce = 0;
-        }**/
 
         //layser detect if the player is on the ground
         bool canJump = false;
@@ -146,14 +136,4 @@ public class Player : MonoBehaviour
     {
         Interact(other);
     }
-
-    /*private void OnCollisionStay(Collision collision)
-    {
-        canJump = true;
-    }
-
-    void OnCollisionExit(Collision collision)
-    {
-        canJump = false;
-    }**/
 }
