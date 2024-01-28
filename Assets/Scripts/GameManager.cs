@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
     public int totalBlocks = 5;
     private int clickedBlocks = 0;
     
-    private float currentAlertLevel = 0f;
-    private float timeSinceLastDetected = 0f;
+    // private float currentAlertLevel = 0f;
+    // private float timeSinceLastDetected = 0f;
 
     public int score = 0;
     public TextMeshProUGUI scoreText;

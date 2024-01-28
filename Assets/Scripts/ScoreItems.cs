@@ -16,6 +16,7 @@ public class ScoreItems : MonoBehaviour
     }
 
     public ObjectsType objectsType;
+    public GameObject player;
 
     public float durablity = 100f;
     public int scoreValue = 10;
@@ -24,9 +25,13 @@ public class ScoreItems : MonoBehaviour
     private RayfireRigid _rayfireRigid;
     private NoiseSystem _noiseSystem;
 
+    public AudioClip glassBroken;
+    private AudioSource playerAudioSource;
+
     private void Start()
     {
         _noiseSystem = FindObjectOfType<NoiseSystem>();
+        playerAudioSource = player.GetComponent<AudioSource>();
 
         switch (objectsType)
         {
@@ -87,15 +92,23 @@ public class ScoreItems : MonoBehaviour
 
     void DestoryItem()
     {
+        
+        if (gameObject.CompareTag("GlassObjects"))
+        {
+            playerAudioSource.PlayOneShot(glassBroken);
+        }
         _isDestoryed = true;
         GameManager.Instance.AddScore(scoreValue);
 
-        _noiseSystem.AddNoise(noiseValue);
+        if(_noiseSystem != null)
+            _noiseSystem.AddNoise(noiseValue);
 
         if (_rayfireRigid != null)
         {
             _rayfireRigid.Demolish();
         }
+
+        
         
         //sound
         // Destroy(gameObject);

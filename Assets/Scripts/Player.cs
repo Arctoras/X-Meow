@@ -11,7 +11,9 @@ public class Player : MonoBehaviour
     [SerializeField, Min(0)] float strafeMultiplier;
     [SerializeField, Min(1)] float sprintMultiplier;
 
-    [SerializeField] float jumpForce = 8f;
+    /*[SerializeField, Min(0)] float maxJumpForce;
+    [SerializeField, Min(0.00001f)] float jumpChargeTime;**/
+    [SerializeField] float JumpForce = 8f;
 
     [SerializeField, Min(0)] float headTurnSpeed;
     [SerializeField, Min(0)] float bodyTurnSpeed;
@@ -19,13 +21,22 @@ public class Player : MonoBehaviour
 
     public float forceMagnitude = 10f;
 
-    [SerializeReference] GameObject impactPrefab;
+
+    /*bool canJump = false;*/
+
+    public GameObject impactPrefab;
+    public AudioClip impactSound;
+
+    bool canJump = false;
+    float jumpForce = 0;
+
 
     Rigidbody rb;
     Animator animator;
-    NoiseSystem _noiseSystem;
+    private AudioSource _audioSource;
+    private NoiseSystem _noiseSystem;
 
-    [SerializeReference] UnityEvent OnDestroyItem;
+    [SerializeField]UnityEvent OnDestroyItem;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +44,8 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         _noiseSystem = FindObjectOfType<NoiseSystem>();
+        _audioSource = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -60,6 +73,7 @@ public class Player : MonoBehaviour
                 Vector3 collisionPoint = interactable.ClosestPoint(transform.position);
 
                 GameObject effect = Instantiate(impactPrefab, collisionPoint, Quaternion.identity);
+                _audioSource.PlayOneShot(impactSound);
                 
                 Destroy(effect, 3f);
                 switch (scoreItems.objectsType)
@@ -76,7 +90,8 @@ public class Player : MonoBehaviour
                         
                         interactable.GetComponent<Rigidbody>().AddForce(force);
                         GameManager.Instance.AddScore(scoreItems.scoreValue);
-                        _noiseSystem.AddNoise(10f);
+                        if(_noiseSystem != null)
+                            _noiseSystem.AddNoise(10f);
                         break;
                     default:
                         break;
@@ -139,7 +154,7 @@ public class Player : MonoBehaviour
 
         if(canJump && Input.GetButtonDown("Jump"))
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
         }
     }
     private void OnTriggerStay(Collider other)
