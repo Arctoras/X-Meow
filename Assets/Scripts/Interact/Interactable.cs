@@ -66,7 +66,7 @@ public class Interactable : MonoBehaviour
             StartCoroutine(DelayedDialogue(interactEvent.FaceImage, interactEvent.DialogueDelay));
 
             // Trigger animation
-            if (m_Animator != null) m_Animator.SetTrigger(interactEvent.AnimationTrigger);
+            if (m_Animator != null  && !string.IsNullOrEmpty(interactEvent.AnimationTrigger)) m_Animator.SetTrigger(interactEvent.AnimationTrigger);
 
             // Trigger other events
             OnInteract.Invoke();
