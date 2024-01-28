@@ -5249,7 +5249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24c7b6805ddd4654a1fbe2c1d09920b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 300
+  timeRemaining: 180
   timerIsRunning: 0
   timerText: {fileID: 1987188462}
 --- !u!82 &1678928439
@@ -5372,7 +5372,7 @@ MonoBehaviour:
   handleAnimator: {fileID: 890363989}
   noiseValue: 0
   noiseMaxValue: 100
-  noiseReduceSpeed: 0.5
+  noiseReduceSpeed: 0.75
 --- !u!1001 &1717051161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6887,7 +6887,7 @@ MonoBehaviour:
   objectsType: 2
   durablity: 600
   scoreValue: 2000
-  noiseValue: 20
+  noiseValue: 10
   glassBroken: {fileID: 8300000, guid: b398ef0db4cc74638b30795f609c3e2b, type: 3}
   brokenSound: {fileID: 8300000, guid: cf46fcb9dc5f641d783c478392b347fc, type: 3}
   paperSound: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
@@ -10058,6 +10058,10 @@ PrefabInstance:
       propertyPath: noiseValue
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1498179761006629209, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+      propertyPath: noiseValue
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1533901503697108727, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
       propertyPath: noiseValue
       value: 5
@@ -10130,6 +10134,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4454072576500992881, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+      propertyPath: noiseValue
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4485417622708015048, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
       propertyPath: noiseValue
       value: 5
@@ -10162,6 +10170,10 @@ PrefabInstance:
       propertyPath: noiseValue
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6316137336712302475, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+      propertyPath: noiseValue
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6409762344999762993, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
       propertyPath: noiseValue
       value: 5
@@ -10170,11 +10182,19 @@ PrefabInstance:
       propertyPath: noiseValue
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6943757453942972286, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+      propertyPath: noiseValue
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7159168999113981628, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
       propertyPath: noiseValue
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7370515896230494554, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+      propertyPath: noiseValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7494703977111682042, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
       propertyPath: noiseValue
       value: 5
       objectReference: {fileID: 0}
@@ -10197,6 +10217,10 @@ PrefabInstance:
     - target: {fileID: 8432834706642571430, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
       propertyPath: m_LocalPosition.y
       value: -4.646
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883768223807645108, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
+      propertyPath: noiseValue
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9206285112818071681, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
       propertyPath: noiseValue
@@ -10628,7 +10652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 928739297556502739, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: noiseValue
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 928739297556502739, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -10707,6 +10731,10 @@ PrefabInstance:
       value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 2061884639053944240, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061884639053944240, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
       value: 
       objectReference: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
@@ -10733,6 +10761,10 @@ PrefabInstance:
     - target: {fileID: 2535551519430299216, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: durablity
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535551519430299216, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2535551519430299216, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -10800,7 +10832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4319502225357991580, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: noiseValue
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4319502225357991580, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -10839,6 +10871,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4945923783310126897, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945923783310126897, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
       value: 
       objectReference: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
@@ -10869,6 +10905,10 @@ PrefabInstance:
     - target: {fileID: 5291336914412318702, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: durablity
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291336914412318702, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5291336914412318702, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -10907,6 +10947,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6099377285166974668, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6099377285166974668, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
       value: 
       objectReference: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
@@ -10933,6 +10977,10 @@ PrefabInstance:
     - target: {fileID: 6121614601793902372, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: durablity
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121614601793902372, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6121614601793902372, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -10971,6 +11019,10 @@ PrefabInstance:
       value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6454454450402837604, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6454454450402837604, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
       value: 
       objectReference: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
@@ -10997,6 +11049,10 @@ PrefabInstance:
     - target: {fileID: 6998871455077509084, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: durablity
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6998871455077509084, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6998871455077509084, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -11029,6 +11085,10 @@ PrefabInstance:
     - target: {fileID: 7688741440304090316, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: durablity
       value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688741440304090316, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7688741440304090316, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -11063,6 +11123,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8290638481691158018, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8290638481691158018, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
       value: 
       objectReference: {fileID: 8300000, guid: d344bf8211b7c4076921106c1ce1bf7b, type: 3}
@@ -11093,6 +11157,10 @@ PrefabInstance:
     - target: {fileID: 8419213238648991316, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: durablity
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419213238648991316, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8419213238648991316, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -11128,7 +11196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8470990614622616426, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: noiseValue
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8470990614622616426, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
@@ -11157,6 +11225,10 @@ PrefabInstance:
     - target: {fileID: 8816289918900786385, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: durablity
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8816289918900786385, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
+      propertyPath: noiseValue
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8816289918900786385, guid: d3f7f81484c754b22bf2aefdd43adf21, type: 3}
       propertyPath: paperSound
