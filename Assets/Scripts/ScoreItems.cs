@@ -19,11 +19,15 @@ public class ScoreItems : MonoBehaviour
 
     public float durablity = 100f;
     public int scoreValue = 10;
+    public float noiseValue = 20f;
     private bool _isDestoryed = false;
     private RayfireRigid _rayfireRigid;
+    private NoiseSystem _noiseSystem;
 
     private void Start()
     {
+        _noiseSystem = FindObjectOfType<NoiseSystem>();
+
         switch (objectsType)
         {
             case ObjectsType.Static:
@@ -85,6 +89,9 @@ public class ScoreItems : MonoBehaviour
     {
         _isDestoryed = true;
         GameManager.Instance.AddScore(scoreValue);
+
+        _noiseSystem.AddNoise(noiseValue);
+
         if (_rayfireRigid != null)
         {
             _rayfireRigid.Demolish();

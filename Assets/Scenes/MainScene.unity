@@ -1765,6 +1765,7 @@ MonoBehaviour:
   objectsType: 1
   durablity: 100
   scoreValue: 100
+  noiseValue: 50
 --- !u!1 &398419879 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1796256932939536545, guid: d439c5f1e9e1548c28b1d9792d0dad57, type: 3}
@@ -2094,6 +2095,7 @@ MonoBehaviour:
   objectsType: 1
   durablity: 150
   scoreValue: 400
+  noiseValue: 50
 --- !u!64 &490312053
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4096,6 +4098,7 @@ MonoBehaviour:
   objectsType: 2
   durablity: 50
   scoreValue: 500
+  noiseValue: 50
 --- !u!114 &1030739126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5214,6 +5217,7 @@ MonoBehaviour:
   objectsType: 1
   durablity: 150
   scoreValue: 300
+  noiseValue: 50
 --- !u!1 &1410586835
 GameObject:
   m_ObjectHideFlags: 0
@@ -5931,6 +5935,34 @@ PrefabInstance:
     - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
       propertyPath: headTurnBounds
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
+      propertyPath: OnDestroyItem.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
+      propertyPath: OnDestroyItem.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
+      propertyPath: OnDestroyItem.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2068935595}
+    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
+      propertyPath: OnDestroyItem.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
+      propertyPath: OnDestroyItem.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DoBadThings
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
+      propertyPath: OnDestroyItem.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChatSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042529378127648158, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
+      propertyPath: OnDestroyItem.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1472309337166633154, guid: 16116c5780e6a2146b34a2d67b42fe20, type: 3}
       propertyPath: m_TagString
@@ -6994,6 +7026,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _faceImage: {fileID: 106852017}
+  cat_angry: {fileID: 21300000, guid: 68c96bc3920a2174795dc0abbe6960d5, type: 3}
+  cat_happy: {fileID: 21300000, guid: 4578ac93612ade3499c4d02f1ecac2e5, type: 3}
+  cat_boring: {fileID: 21300000, guid: 2b8088cc6e630d24286162209cf01bd8, type: 3}
+  cat_devil: {fileID: 21300000, guid: 3ce17210916bc5c4db12612d9a9eef87, type: 3}
   _chatBox: {fileID: 1996072990}
   _chatDuration: 3
 --- !u!222 &2068935596
