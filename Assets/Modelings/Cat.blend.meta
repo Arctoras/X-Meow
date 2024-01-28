@@ -124,7 +124,7 @@ ModelImporter:
       takeName: Scene
       internalID: 1963079803359675471
       firstFrame: 177
-      lastFrame: 208
+      lastFrame: 200
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -152,8 +152,8 @@ ModelImporter:
       name: Smack.L
       takeName: Scene
       internalID: -626948583029366203
-      firstFrame: 209
-      lastFrame: 224
+      firstFrame: 201
+      lastFrame: 216
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -181,8 +181,8 @@ ModelImporter:
       name: Smack.R
       takeName: Scene
       internalID: -8206857311389296499
-      firstFrame: 225
-      lastFrame: 240
+      firstFrame: 217
+      lastFrame: 232
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -210,8 +210,8 @@ ModelImporter:
       name: Walk
       takeName: Scene
       internalID: -4885119122951247324
-      firstFrame: 241
-      lastFrame: 272
+      firstFrame: 233
+      lastFrame: 264
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

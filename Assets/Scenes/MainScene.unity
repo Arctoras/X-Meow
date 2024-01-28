@@ -1452,8 +1452,8 @@ MonoBehaviour:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 0, y: 0, z: 0}
   meshDemolition:
-    am: 12
-    var: 0
+    am: 23
+    var: 14
     dpf: 0.5
     bias: 0
     sd: 26
@@ -5728,7 +5728,7 @@ MonoBehaviour:
       m_Extent: {x: 0, y: 0, z: 0}
   meshDemolition:
     am: 11
-    var: 0
+    var: 76
     dpf: 0.5
     bias: 0
     sd: 22
@@ -6096,8 +6096,8 @@ MonoBehaviour:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 0, y: 0, z: 0}
   meshDemolition:
-    am: 10
-    var: 0
+    am: 23
+    var: 17
     dpf: 0.5
     bias: 0
     sd: 3
@@ -6473,8 +6473,8 @@ MonoBehaviour:
       m_Center: {x: 0, y: 0, z: 0}
       m_Extent: {x: 0, y: 0, z: 0}
   meshDemolition:
-    am: 10
-    var: 0
+    am: 17
+    var: 25
     dpf: 0.5
     bias: 0
     sd: 32
@@ -6828,7 +6828,7 @@ MonoBehaviour:
       m_Extent: {x: 0, y: 0, z: 0}
   meshDemolition:
     am: 9
-    var: 0
+    var: 8
     dpf: 0.5
     bias: 0
     sd: 20

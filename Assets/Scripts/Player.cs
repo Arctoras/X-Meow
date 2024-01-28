@@ -11,25 +11,18 @@ public class Player : MonoBehaviour
     [SerializeField, Min(0)] float strafeMultiplier;
     [SerializeField, Min(1)] float sprintMultiplier;
 
-    /*[SerializeField, Min(0)] float maxJumpForce;
-    [SerializeField, Min(0.00001f)] float jumpChargeTime;**/
     [SerializeField] float JumpForce = 8f;
 
     [SerializeField, Min(0)] float headTurnSpeed;
     [SerializeField, Min(0)] float bodyTurnSpeed;
     [SerializeField, Range(0,90)] float headTurnBounds;
 
+    bool canMove = true;
+
     public float forceMagnitude = 10f;
-
-
-    /*bool canJump = false;*/
 
     public GameObject impactPrefab;
     public AudioClip impactSound;
-
-    bool canJump = false;
-    float jumpForce = 0;
-
 
     Rigidbody rb;
     Animator animator;
@@ -57,7 +50,7 @@ public class Player : MonoBehaviour
         }
         else if(GameManager.Instance.isGameStarted)
         {
-            Move();
+            if (canMove) Move();
             Turn();
             Smack();
         }
@@ -66,7 +59,6 @@ public class Player : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1")  || Input.GetButtonDown("Fire2"))
         {
-            Debug.Log(interactable.name);
             ScoreItems scoreItems = interactable.GetComponent<ScoreItems>();
             if (scoreItems != null)
             {
@@ -106,11 +98,11 @@ public class Player : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            animator.Play("Smack1");
+            animator.Play("Smack_L");
         }
         if (Input.GetButtonDown("Fire2"))
         {
-            animator.Play("Smack2");
+            animator.Play("Smack_R");
         }
     }
 
@@ -138,7 +130,6 @@ public class Player : MonoBehaviour
 
         //laser detect if the player is on the ground
         bool canJump = false;
-        Debug.DrawRay(transform.position, Vector3.down * 1.1f, Color.red);
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.1f))
         {
@@ -154,11 +145,20 @@ public class Player : MonoBehaviour
 
         if(canJump && Input.GetButtonDown("Jump"))
         {
-            rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+            StartCoroutine(Jump());
         }
     }
     private void OnTriggerStay(Collider other)
     {
         Interact(other);
+    }
+
+    IEnumerator Jump()
+    {
+        canMove = false;
+        animator.Play("Jump");
+        yield return new WaitForSeconds(0.25f);
+        canMove = true;
+        rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
     }
 }
