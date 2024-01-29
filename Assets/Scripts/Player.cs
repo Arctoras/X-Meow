@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
             animator.SetTrigger("Smack_L");
         else
             animator.SetTrigger("Smack_R");
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.01f);
         animator.ResetTrigger("Smack_L");
         animator.ResetTrigger("Smack_R");
         canSmack = true;
@@ -134,6 +134,7 @@ public class Player : MonoBehaviour
     void Turn()
     {
         float rotation = Input.GetAxis("Mouse X") * bodyTurnSpeed * Time.deltaTime;
+        float rotationY = Input.GetAxis("Mouse Y") * bodyTurnSpeed * Time.deltaTime;
         if (!idle)
         {
             camera.localPosition = camStarPos;
@@ -142,6 +143,7 @@ public class Player : MonoBehaviour
         } else
         {
             camera.RotateAround(transform.position, Vector3.up, rotation);
+            camera.RotateAround(transform.position,Vector3.left, -rotationY/2);
         }
     }
         
